@@ -76,5 +76,13 @@ ___
 ![img_1.png](plot/VTN_train.png)
 ___
 ## WaveNet: A Generative Model for Raw Audio
-原文：https://arxiv.org/abs/1609.03499
+原文：https://arxiv.org/abs/1609.03499  
 翻译：https://blog.csdn.net/weixin_42721167/article/details/112593690
+代码：https://github.com/linslime/WaveNet
+### WaveNet
+#### WaveNet模型结构
+![img.png](plot/WaveNet.png)
+#### 因果卷积
+![img_1.png](plot/CausalConvolution.png)
+#### 扩大卷积
+![img_2.png](plot/DilatedConvolution.png)
