@@ -58,4 +58,10 @@ ___
 翻译：https://blog.csdn.net/weixin_42721167/article/details/114479658
 ### DEEP VOICE 3
 #### DEEP VOICE 3模型结构
-![img.png](img.png)
+![img.png](plot/DEEP VOICE 3.png)
+#### Convolution Block
+![img_1.png](plot/Convolution Block.png)
+#### Attention Block
+![img_2.png](plot/Attention Block.png)
+#### WORLD Block
+![img_3.png](plot/WORLD Block.png)
