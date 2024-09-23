@@ -37,8 +37,16 @@ ___
 ___
 ## Neural Speech Synthesis with Transformer Network
 原文：https://arxiv.org/abs/1809.08895  
-翻译：https://blog.csdn.net/weixin_42721167/article/details/119639442
+翻译：https://blog.csdn.net/weixin_42721167/article/details/119639442  
 代码：https://github.com/linslime/Transformer-TTS  
 ### Transformer-TTS
 #### Transformer-TTS模型结构
 ![img.png](plot/Transformer-TTS.png)
+___
+## WaveGlow: A Flow-based Generative Network for Speech Synthesis
+原文：https://arxiv.org/abs/1811.00002  
+翻译：https://blog.csdn.net/weixin_42721167/article/details/115493648
+代码：https://github.com/NVIDIA/waveglow
+### WaveGlow
+#### WaveGlow模型结构
+![img.png](plot/WaveGlow.png)
