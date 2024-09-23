@@ -77,7 +77,7 @@ ___
 ___
 ## WaveNet: A Generative Model for Raw Audio
 原文：https://arxiv.org/abs/1609.03499  
-翻译：https://blog.csdn.net/weixin_42721167/article/details/112593690
+翻译：https://blog.csdn.net/weixin_42721167/article/details/112593690  
 代码：https://github.com/linslime/WaveNet
 ### WaveNet
 #### WaveNet模型结构
@@ -88,11 +88,28 @@ ___
 ![img_2.png](plot/DilatedConvolution.png)
 ___
 ## HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis
-原文：https://arxiv.org/abs/2010.05646
-翻译:https://blog.csdn.net/weixin_42262721/article/details/120796935
+原文：https://arxiv.org/abs/2010.05646  
+翻译:https://blog.csdn.net/weixin_42262721/article/details/120796935  
 代码：https://github.com/linslime/hifi-gan
 ### HHiFi-GAN
 #### Generator
 ![img.png](plot/HiFi-GAN-Generative.png)
 #### Discriminator
 ![img_1.png](plot/HiFi-GAN-Discriminator.png)
+___
+## Pixel Recurrent Neural Networks
+原文：https://arxiv.org/abs/1601.06759  
+翻译：https://blog.csdn.net/Blackoutdragon/article/details/131163328  
+代码：https://github.com/linslime/PixelCNN
+___
+## Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech
+原文：https://arxiv.org/abs/2106.06103  
+翻译：https://blog.csdn.net/zzfive/article/details/127061469  
+代码：https://github.com/linslime/vits
+### VITS
+#### VITS模型训练和推演过程
+![img.png](plot/VITS.png)
+#### 框图描述了随机持续时间预测器的 (a) 训练过程和 (b) 推理过程。随机持续时间预测器的主要构建块是 (c) 膨胀和深度可分离的卷积残差块
+![img_1.png](plot/VITS1.png)
+#### (a) 条件编码器和 (b) 随机持续时间预测器中使用的耦合层的架构
+![img_2.png](plot/VITS2.png)
