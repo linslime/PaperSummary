@@ -58,19 +58,23 @@ ___
 翻译：https://blog.csdn.net/weixin_42721167/article/details/114479658
 ### DEEP VOICE 3
 #### DEEP VOICE 3模型结构
-![img.png](plot/DEEP VOICE 3.png)
+![img.png](plot/DEEP_VOICE_3.png)
 #### Convolution Block
-![img_1.png](plot/Convolution Block.png)
+![img_1.png](plot/Convolution_Block.png)
 #### Attention Block
-![img_2.png](plot/Attention Block.png)
+![img_2.png](plot/Attention_Block.png)
 #### WORLD Block
-![img_3.png](plot/WORLD Block.png)
+![img_3.png](plot/WORLD_Block.png)
 ___
 ## Voice Transformer Network: Sequence-to-Sequence Voice Conversion Using Transformer with Text-to-Speech Pretraining
 原文：https://arxiv.org/abs/1912.06813  
 翻译：https://blog.csdn.net/weixin_42721167/article/details/114759156
 ### Voice Transformer Network
 #### Voice Transformer Network模型结构
-![img.png](plot/Voice Transformer Network.png)
+![img.png](plot/Voice_Transformer_Network.png)
 #### 训练过程
 ![img_1.png](plot/VTN_train.png)
+___
+## WaveNet: A Generative Model for Raw Audio
+原文：https://arxiv.org/abs/1609.03499
+翻译：https://blog.csdn.net/weixin_42721167/article/details/112593690
