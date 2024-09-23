@@ -47,14 +47,14 @@ ___
 ___
 ## WaveGlow: A Flow-based Generative Network for Speech Synthesis
 原文：https://arxiv.org/abs/1811.00002  
-翻译：https://blog.csdn.net/weixin_42721167/article/details/115493648
+翻译：https://blog.csdn.net/weixin_42721167/article/details/115493648  
 代码：https://github.com/NVIDIA/waveglow
 ### WaveGlow
 #### WaveGlow模型结构
 ![img.png](plot/WaveGlow.png)
 ___
 ## Deep Voice 3: Scaling Text-to-Speech with Convolutional Sequence Learning
-原文：https://arxiv.org/abs/1710.07654
+原文：https://arxiv.org/abs/1710.07654  
 翻译：https://blog.csdn.net/weixin_42721167/article/details/114479658
 ### DEEP VOICE 3
 #### DEEP VOICE 3模型结构
@@ -65,3 +65,12 @@ ___
 ![img_2.png](plot/Attention Block.png)
 #### WORLD Block
 ![img_3.png](plot/WORLD Block.png)
+___
+## Voice Transformer Network: Sequence-to-Sequence Voice Conversion Using Transformer with Text-to-Speech Pretraining
+原文：https://arxiv.org/abs/1912.06813  
+翻译：https://blog.csdn.net/weixin_42721167/article/details/114759156
+### Voice Transformer Network
+#### Voice Transformer Network模型结构
+![img.png](plot/Voice Transformer Network.png)
+#### 训练过程
+![img_1.png](plot/VTN_train.png)
