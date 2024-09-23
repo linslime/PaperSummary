@@ -16,7 +16,8 @@ ___
 代码：https://github.com/linslime/Tacotron2-PyTorch  
 ### Tacotron2
 #### Tacotron模型结构
-![img.png](plot/Tacotron2.png)
+![img.png](plot/Tacotron2.png)  
+![img.png](plot/Tacotron2_new.png)
 ___
 ## FastSpeech: Fast, Robust and Controllable Text to Speech
 原文：https://arxiv.org/abs/1905.09263  
@@ -33,3 +34,11 @@ ___
 ### FastSpeech2
 #### FastSpeech模型结构
 ![img.png](plot/FastSpeech2.png)
+___
+## Neural Speech Synthesis with Transformer Network
+原文：https://arxiv.org/abs/1809.08895  
+翻译：https://blog.csdn.net/weixin_42721167/article/details/119639442
+代码：https://github.com/linslime/Transformer-TTS  
+### Transformer-TTS
+#### Transformer-TTS模型结构
+![img.png](plot/Transformer-TTS.png)
