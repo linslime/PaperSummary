@@ -25,3 +25,11 @@ ___
 ### FastSpeech
 #### FastSpeech模型结构
 ![img.png](plot/FastSpeech.png)
+___
+## FastSpeech 2: Fast and High-Quality End-to-End Text to Speech
+原文：https://arxiv.org/abs/2006.04558  
+翻译：https://blog.csdn.net/weixin_42721167/article/details/118226439  
+代码：https://github.com/linslime/FastSpeech2
+### FastSpeech2
+#### FastSpeech模型结构
+![img.png](plot/FastSpeech2.png)
