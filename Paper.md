@@ -17,3 +17,11 @@ ___
 ### Tacotron2
 #### Tacotron模型结构
 ![img.png](plot/Tacotron2.png)
+___
+## FastSpeech: Fast, Robust and Controllable Text to Speech
+原文：https://arxiv.org/abs/1905.09263  
+翻译：https://blog.csdn.net/weixin_42721167/article/details/118226439  
+代码：https://github.com/linslime/FastSpeech  
+### FastSpeech
+#### FastSpeech模型结构
+![img.png](plot/FastSpeech.png)
