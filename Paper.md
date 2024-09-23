@@ -53,7 +53,9 @@ ___
 #### WaveGlow模型结构
 ![img.png](plot/WaveGlow.png)
 ___
-## Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions
-原文：https://arxiv.org/abs/1712.05884
-翻译：https://blog.csdn.net/weixin_42721167/article/details/114377171
-### 
+## Deep Voice 3: Scaling Text-to-Speech with Convolutional Sequence Learning
+原文：https://arxiv.org/abs/1710.07654
+翻译：https://blog.csdn.net/weixin_42721167/article/details/114479658
+### DEEP VOICE 3
+#### DEEP VOICE 3模型结构
+![img.png](img.png)
