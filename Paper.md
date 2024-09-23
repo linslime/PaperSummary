@@ -86,3 +86,13 @@ ___
 ![img_1.png](plot/CausalConvolution.png)
 #### 扩大卷积
 ![img_2.png](plot/DilatedConvolution.png)
+___
+## HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis
+原文：https://arxiv.org/abs/2010.05646
+翻译:https://blog.csdn.net/weixin_42262721/article/details/120796935
+代码：https://github.com/linslime/hifi-gan
+### HHiFi-GAN
+#### Generator
+![img.png](plot/HiFi-GAN-Generative.png)
+#### Discriminator
+![img_1.png](plot/HiFi-GAN-Discriminator.png)
