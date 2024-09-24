@@ -115,9 +115,18 @@ ___
 ![img_2.png](plot/VITS2.png)
 ___
 ## NaturalSpeech: End-to-End Text to Speech Synthesis with Human-Level Quality
-原文：https://arxiv.org/abs/2205.04421
-翻译：https://blog.csdn.net/weixin_44649780/article/details/134829743
+原文：https://arxiv.org/abs/2205.04421  
+翻译：https://blog.csdn.net/weixin_44649780/article/details/134829743  
 代码：https://github.com/heatz123/naturalspeech
 ### NaturalSpeech
 #### NaturalSpeech模型训练和推演过程
 ![img.png](plot/NaturalSpeech.png)
+___
+## NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers
+原文：https://arxiv.org/abs/2304.09116  
+翻译：https://blog.csdn.net/weixin_44649780/article/details/134828929  
+代码：https://github.com/lucidrains/naturalspeech2-pytorch
+### NaturalSpeech 2
+#### NaturalSpeech 2模型结构
+![img.png](plot/NaturalSpeech2.png)
+![img_1.png](plot/NaturalSpeech2_2.png)
