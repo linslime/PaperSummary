@@ -138,3 +138,17 @@ ___
 ### VoiceCraft
 #### VoiceCraft模型结构
 ![img.png](plot/VoiceCraft.png)
+___
+## VITS2: Improving Quality and Efficiency of Single-Stage Text-to-Speech with Adversarial Learning and Architecture Design
+原文：https://arxiv.org/abs/2307.16430  
+翻译：https://blog.csdn.net/qq_39247879/article/details/132168384
+### VITS2
+#### VITS2模型结构
+![img.png](img.png)
+___
+## PITS: Variational Pitch Inference without Fundamental Frequency for End-to-End Pitch-controllable TTS
+原文：https://arxiv.org/abs/2302.12391  
+代码：https://github.com/anonymous-pits/pits
+### PITS
+#### PITS模型结构
+![img_1.png](img_1.png)
