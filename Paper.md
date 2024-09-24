@@ -130,3 +130,11 @@ ___
 #### NaturalSpeech 2模型结构
 ![img.png](plot/NaturalSpeech2.png)
 ![img_1.png](plot/NaturalSpeech2_2.png)
+___
+## VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild
+原文：https://arxiv.org/abs/2403.16973  
+翻译：https://blog.csdn.net/matt45m/article/details/140153776  
+代码：https://github.com/jasonppy/voicecraft  
+### VoiceCraft
+#### VoiceCraft模型结构
+![img.png](plot/VoiceCraft.png)
