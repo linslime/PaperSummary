@@ -113,3 +113,11 @@ ___
 ![img_1.png](plot/VITS1.png)
 #### (a) 条件编码器和 (b) 随机持续时间预测器中使用的耦合层的架构
 ![img_2.png](plot/VITS2.png)
+___
+## NaturalSpeech: End-to-End Text to Speech Synthesis with Human-Level Quality
+原文：https://arxiv.org/abs/2205.04421
+翻译：https://blog.csdn.net/weixin_44649780/article/details/134829743
+代码：https://github.com/heatz123/naturalspeech
+### NaturalSpeech
+#### NaturalSpeech模型训练和推演过程
+![img.png](plot/NaturalSpeech.png)
