@@ -112,7 +112,7 @@ ___
 #### 框图描述了随机持续时间预测器的 (a) 训练过程和 (b) 推理过程。随机持续时间预测器的主要构建块是 (c) 膨胀和深度可分离的卷积残差块
 ![img_1.png](plot/VITS1.png)
 #### (a) 条件编码器和 (b) 随机持续时间预测器中使用的耦合层的架构
-![img_2.png](plot/VITS2.png)
+![img_2.png](plot/VITS_2.png)
 ___
 ## NaturalSpeech: End-to-End Text to Speech Synthesis with Human-Level Quality
 原文：https://arxiv.org/abs/2205.04421  
@@ -144,11 +144,11 @@ ___
 翻译：https://blog.csdn.net/qq_39247879/article/details/132168384
 ### VITS2
 #### VITS2模型结构
-![img.png](img.png)
+![img.png](plot/VITS2.png)
 ___
 ## PITS: Variational Pitch Inference without Fundamental Frequency for End-to-End Pitch-controllable TTS
 原文：https://arxiv.org/abs/2302.12391  
 代码：https://github.com/anonymous-pits/pits
 ### PITS
 #### PITS模型结构
-![img_1.png](img_1.png)
+![img_1.png](plot/PITS.png)
