@@ -152,3 +152,8 @@ ___
 ### PITS
 #### PITS模型结构
 ![img_1.png](plot/PITS.png)
+___
+## MSMC-TTS: Multi-Stage Multi-Codebook VQ-VAE Based Neural TTS
+原文：https://ieeexplore.ieee.org/abstract/document/10114504
+### MSMC-TTS
+####
