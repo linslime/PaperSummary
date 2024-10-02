@@ -156,4 +156,15 @@ ___
 ## MSMC-TTS: Multi-Stage Multi-Codebook VQ-VAE Based Neural TTS
 原文：https://ieeexplore.ieee.org/abstract/document/10114504
 ### MSMC-TTS
-####
+#### Framework of the neural TTS system
+![img.png](plot/FrameworkOfTheNeuralTTSSystem.png)
+#### Framework of VQ-VAE for speech data
+![FrameworkOfVQ-VAEForSpeechData.png](plot/FrameworkOfVQ-VAEForSpeechData.png)
+#### Multi-Head Vector Quantization
+![img.png](plot/Multi-HeadVectorQuantization.png)
+#### Architecture of the multi-stage multi-codebook VQ-VAE
+![img.png](plot/Multi-stageMulti-codebookVQ-VAE..png)
+#### Framework of MSMC-TTS.
+![img.png](plot/MSMC-TTS.png)
+#### Multi-Stage Predictor.
+![img.png](img.png)
