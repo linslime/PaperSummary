@@ -185,3 +185,33 @@ ___
 ![img.png](plot/P-Flow.png)
 #### Flow Matching Decoder
 ![img_1.png](plot/FlowMatchingDecoder.png)
+___
+## AdvTTS: Adversarial Text-to-Speech Synthesis Attack on Speaker Identification Systems
+原文：https://ieeexplore.ieee.org/document/10447190  
+### ABSTRACT
+说话人识别 (SI) 系统已广泛应用于实际应用中。然而，最近的研究表明，即使不向攻击者提供反馈，SI 系统也容易受到两种普遍存在的攻击：基于转移的对抗攻击和语音合成欺骗攻击。基于转移的对抗攻击面临着收集特定内容和音色的自然语音的挑战。相比之下，语音合成欺骗攻击可以合成任何内容和音色的语音，但可以被音频深度伪造检测器 (ADD) 检测到。在本文中，我们提出了一种称为对抗性文本到语音合成 (AdvTTS) 的新方法来攻击 SI 系统。AdvTTS 结合了基于转移的对抗攻击和语音合成欺骗攻击的优势，通过使用本地代理模型合成可转移的攻击语音。 AdvTTS 是首个能够对任意语音内容和音色进行对抗和欺骗攻击的攻击方法。AdvTTS 能够以高质量语音欺骗 SI 系统，同时逃避 ADD 检测。实验表明，AdvTTS 在欺骗攻击方面的表现优于其他基线，并且在与投影梯度下降 (PGD) 相结合的对抗攻击方面的表现优于基线。
+>Speaker identification (SI) systems have been widely em
+ployed in real-world applications. However, recent research
+ has demonstrated that SI systems are vulnerable to two preva
+lent attacks even without providing feedback to the attacker:
+ the transfer-based adversarial attack and the speech synthe
+sis spoofing attack. The transfer-based adversarial attack
+ faces the challenges of collecting natural speech for specific
+ content and timbre. In contrast, the speech synthesis spoof
+ing attack can synthesize speech for any content and timbre
+ but can be detected by audio deepfake detectors (ADD). In
+ this paper, we propose a novel method, called adversarial
+ text-to-speech synthesis (AdvTTS), for attacking SI systems.
+ AdvTTS combines the strengths of transfer-based adversarial
+ attacks and speech synthesis spoofing attacks, by synthesiz
+ing transferable attack speech with local surrogate models.
+ AdvTTS is the first attack method that can conduct both ad
+versarial and spoofing attacks with any speech content and
+ timbre. AdvTTS can deceive SI systems with high-quality
+ speech while evading ADD detection. Experiments show that
+ AdvTTS can outperform other baselines for spoofing attacks,
+ and can outperform the baselines for adversarial attacks with
+ the combination of projected gradient descent (PGD).
+### AdvTTS
+#### The architecture of AdvTTS
+![img.png](img.png)
