@@ -168,3 +168,12 @@ ___
 ![img.png](plot/MSMC-TTS.png)
 #### Multi-Stage Predictor.
 ![img.png](plot/Multi-StagePredictor.png)
+___
+## StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models
+原文：https://proceedings.neurips.cc/paper_files/paper/2023/hash/3eaad2a0b62b5ed7a2e66c2188bb1449-Abstract-Conference.html
+译文：https://zhuanlan.zhihu.com/p/681000850
+### StyleTTS 2
+#### Acoustic modules pre-training and joint training.
+![img.png](plot/AcousticModules.png)
+#### SLM adversarial training and inference.
+![img_1.png](plot/SLMAdversarial.png)
