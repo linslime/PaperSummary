@@ -167,4 +167,4 @@ ___
 #### Framework of MSMC-TTS.
 ![img.png](plot/MSMC-TTS.png)
 #### Multi-Stage Predictor.
-![img.png](img.png)
+![img.png](plot/Multi-StagePredictor.png)
