@@ -314,6 +314,7 @@ ing, transfer learning, and curriculum learning. Experiments and
  ablation studies on the IEMOCAP dataset demonstrate the effective
 ness of our method, compared with other data augmentation meth
 ods, and data augmentation with other synthetic data.
+___
 ## DCTTS: Discrete Diffusion Model with Contrastive Learning for Text-to-Speech Generation
 原文：https://ieeexplore.ieee.org/document/10447661  
 ### ABSTRACT
@@ -336,4 +337,25 @@ mental results demonstrate that the approach proposed in this
  of diffusion model. The synthesized samples are available at
  https://github.com/lawtherWu/DCTTS
 ### DCTTS
-![img.png](img.png)
+![img.png](plot/DCTTS.png)
+___
+## Matcha-TTS: A Fast TTS Architecture with Conditional Flow Matching
+原文：https://ieeexplore.ieee.org/document/10448291
+### ABSTRACT
+我们引入了 Matcha-TTS，这是一种用于快速 TTS 声学建模的新型编码器-解码器架构，使用最优传输条件流匹配 (OT-CFM) 进行训练。与使用分数匹配训练的模型相比，这产生了一个基于 ODE 的解码器，能够在更少的合成步骤中实现高输出质量。精心的设计选择还确保每个合成步骤运行速度快。该方法是概率性的、非自回归的，并且无需外部对齐即可从头开始学习说话。与强大的预训练基线模型相比，Matcha-TTS 系统占用的内存最小，在长话语上可与最快的模型相媲美，并在听力测试中获得最高的平均意见分数。
+> We introduce Matcha-TTS, a new encoder-decoder architecture for
+ speedy TTS acoustic modelling, trained using optimal-transport
+ conditional flow matching (OT-CFM). This yields an ODE-based
+ decoder capable of high output quality in fewer synthesis steps than
+ models trained using score matching. Careful design choices ad
+ditionally ensure each synthesis step is fast to run. The method
+ is probabilistic, non-autoregressive, and learns to speak from
+ scratch without external alignments. Compared to strong pre-trained
+ baseline models, the Matcha-TTS system has the smallest memory
+ footprint, rivals the speed of the fastest model on long utterances,
+ and attains the highest mean opinion score in a listening test.
+### Matcha-TTS
+#### Matcha-TTS模型
+![img_1.png](plot/Matcha-TTS.png)
+#### Matcha-TTS decoder
+![img_2.png](plot/Matcha-TTSDecoder.png)
