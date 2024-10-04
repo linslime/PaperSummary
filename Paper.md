@@ -217,7 +217,7 @@ versarial and spoofing attacks with any speech content and
 ![img.png](plot/AdvTTS.png)
 ___
 ## Towards Universal Speech Discrete Tokens: A Case Study for ASR and TTS
-原文：https://ieeexplore.ieee.org/document/10447751
+原文：https://ieeexplore.ieee.org/document/10447751  
 代码：https://github.com/k2-fsa/icefall 
 ### ABSTRACT
 自监督学习 (SSL) 在语音相关任务中的熟练程度推动了将离散标记用于语音任务（如识别和翻译）的研究，这些任务具有较低的存储要求和采用自然语言处理技术的巨大潜力。然而，这些研究主要集中于单任务，面临着语音识别任务中过度拟合和性能下降等挑战，通常以牺牲多任务场景中的性能为代价。本研究对语音识别和合成任务中各种领先的 SSL 模型生成的离散标记进行了全面的比较和优化。我们的目标是探索语音离散标记在多个语音任务中的通用性。实验结果表明，离散标记在语音识别任务中与在 FBank 特征上训练的系统取得了相当的结果，并且在主观和客观指标上优于语音合成中的梅尔频谱图特征。这些发现表明通用离散标记在各种语音相关任务中具有巨大的潜力。我们的工作是开源的
@@ -242,3 +242,98 @@ tures in speech recognition tasks and outperform mel-spectrogram
  and publicly available at https://github.com/k2-fsa/icefall.
 ### speech discrete tokens
 ![img.png](plot/UniversalSpeechDiscreteTokens.png)
+___
+## REFLOW-TTS:A RECTIFIED FLOW MODEL FOR HIGH-FIDELITY TEXT-TO-SPEECH
+原文：https://ieeexplore.ieee.org/document/10447822
+### ABSTRACT
+包括去噪扩散概率模型 (DDPM) 和基于分数的生成模型在内的扩散模型在语音合成任务中表现出色。然而，它的有效性是以大量的采样步骤为代价的，导致合成高质量语音所需的采样时间延长。这个缺点阻碍了它在现实世界场景中的实际适用性。在本文中，我们介绍了一种新的基于整流流的高保真语音合成方法 ReFlow-TTS。具体来说，我们的 ReFlow-TTS 只是一个常微分方程 (ODE) 模型，它尽可能通过直线路径将高斯分布传输到地面真实梅尔频谱图分布。此外，我们提出的方法能够通过单个采样步骤实现高质量的语音合成，并且无需训练教师模型。我们在 LJSpeech 数据集上的实验表明，与其他基于扩散的模型相比，我们的 ReFlow-TTS 方法实现了最佳性能。与现有的单步 TTS 模型相比，采用单步采样的 ReFlow-TTS 取得了具有竞争力的性能。
+> The diffusion models including Denoising Diffusion Probabilistic
+ Models (DDPM) and score-based generative models have demon
+strated excellent performance in speech synthesis tasks. However, its
+ effectiveness comes at the cost of numerous sampling steps, result
+ing in prolonged sampling time required to synthesize high-quality
+ speech. This drawback hinders its practical applicability in real
+world scenarios. In this paper, we introduce ReFlow-TTS, a novel
+ rectified flow based method for speech synthesis with high-fidelity.
+ Specifically, our ReFlow-TTS is simply an Ordinary Differential
+ Equation (ODE) model that transports Gaussian distribution to the
+ ground-truth Mel-spectrogram distribution by straight line paths as
+ much as possible. Furthermore, our proposed approach enables
+ high-quality speech synthesis with a single sampling step and elim
+inates the need for training a teacher model. Our experiments on
+ LJSpeech Dataset show that our ReFlow-TTS method achieves
+ the best performance compared with other diffusion based models.
+ And the ReFlow-TTS with one step sampling achieves competitive
+ performance compared with existing one-step TTS models.
+### REFLOW-TTS
+#### An illustration of ReFlow-TTS.
+![img.png](plot/REFLOW-TTS.png)
+___
+## Multi-Task Learning for Front-End Text Processing in TTS
+原文：https://ieeexplore.ieee.org/document/10446241
+### ABSTRACT
+我们提出了一个多任务学习 (MTL) 模型，用于联合执行通常在文本转语音 (TTS) 前端解决的三个任务：文本规范化 (TN)、词性 (POS) 标记和同形异义词消歧 (HD)。我们的框架采用树状结构，其主干学习共享表示，然后是单独的特定于任务的头。我们进一步结合了预先训练的语言模型来利用其内置的词汇和上下文知识，并研究如何最好地使用其嵌入，以最有效地使我们的多任务模型受益。通过任务消融，我们表明，与在单个或子任务组合上训练的模型相比，我们在所有三个任务上训练的完整模型实现了最强的整体性能，证实了我们的 MTL 框架的优势。最后，我们引入了一个新的 HD 数据集，其中包含不同上下文中各种同形异义词及其发音的平衡数量的句子。我们证明，与仅使用常用但不平衡的预先存在的数据集相比，将该数据集纳入训练可以显著提高 HD 性能。
+> Wepropose a multi-task learning (MTL) model for jointly performing
+ three tasks that are commonly solved in a text-to-speech (TTS) front
+end: text normalization (TN), part-of-speech (POS) tagging, and
+ homograph disambiguation (HD). Our framework utilizes a tree-like
+ structure with a trunk that learns shared representations, followed by
+ separate task-specific heads. We further incorporate a pre-trained lan
+guage model to utilize its built-in lexical and contextual knowledge,
+ and study how to best use its embeddings so as to most effectively
+ benefit our multi-task model. Through task-wise ablations, we show
+ that our full model trained on all three tasks achieves the strongest
+ overall performance compared to models trained on individual or
+ sub-combinations of tasks, confirming the advantages of our MTL
+ framework. Finally, we introduce a new HD dataset containing a bal
+anced number of sentences in diverse contexts for a variety of homo
+graphs and their pronunciations. We demonstrate that incorporating
+ this dataset into training significantly improves HD performance over
+ only using a commonly used, but imbalanced, pre-existing dataset.
+### Multi-Task
+![img_1.png](plot/Multi-Task.png)
+___
+## Leveraging Speech PTM, Text LLM, And Emotional TTS For Speech Emotion Recognition
+原文：https://ieeexplore.ieee.org/document/10445906
+### ABSTRACT
+在本文中，我们探索了如何使用最先进的语音预训练模型 (PTM)、data2vec、文本生成技术 GPT-4 和语音合成技术 Azure TTS 来增强语音情感识别 (SER)。首先，我们研究了不同语音自监督预训练模型的表示能力，发现 data2vec 在 SER 任务上具有良好的表示能力。其次，我们采用了强大的大型语言模型 (LLM)、GPT-4 和情感文本转语音 (TTS) 模型 Azure TTS 来生成情感一致的文本和语音。我们精心设计了文本提示和数据集构建，以获得高质量的合成情感语音数据。第三，我们研究了不同的数据增强方法，以使用合成语音来促进 SER 任务，包括随机混合、对抗训练、迁移学习和课程学习。在 IEMOCAP 数据集上进行的实验和消融研究证明了我们的方法与其他数据增强方法以及使用其他合成数据进行数据增强相比的有效性。
+> In this paper, we explored how to boost speech emotion recogni
+tion (SER) with the state-of-the-art speech pre-trained model (PTM),
+ data2vec, text generation technique, GPT-4, and speech synthesis
+ technique, Azure TTS. First, we investigated the representation abil
+ity of different speech self-supervised pre-trained models, and we
+ found that data2vec has a good representation ability on the SER
+ task. Second, we employed apowerful large language model (LLM),
+ GPT-4, and emotional text-to-speech (TTS) model, Azure TTS, to
+ generate emotionally congruent text and speech. We carefully de
+signed the text prompt and dataset construction, to obtain the syn
+thetic emotional speech data with high quality. Third, we stud
+ied different ways of data augmentation to promote the SER task
+ with synthetic speech, including random mixing, adversarial train
+ing, transfer learning, and curriculum learning. Experiments and
+ ablation studies on the IEMOCAP dataset demonstrate the effective
+ness of our method, compared with other data augmentation meth
+ods, and data augmentation with other synthetic data.
+## DCTTS: Discrete Diffusion Model with Contrastive Learning for Text-to-Speech Generation
+原文：https://ieeexplore.ieee.org/document/10447661  
+### ABSTRACT
+在文本转语音（TTS）任务中，潜在扩散模型具有出色的保真度和泛化能力，但其昂贵的资源消耗和较慢的推理速度一直是一个挑战。为了解决这个问题，本文提出了一种用于文本转语音生成（DCTTS）的具有对比学习的离散扩散模型。具体来说，我们采用一个简单有效的文本编码器，使用 VQ 模型将原始数据压缩到离散空间，然后在离散空间上训练扩散模型。为了最大限度地减少合成高质量语音所需的扩散步骤数，我们在整个扩散模型训练阶段使用了对比学习损失。实验结果表明，本文提出的方法具有出色的语音合成质量和采样速度，同时显着降低了扩散模型的资源消耗。合成样本可在 https://github.com/lawtherWu/DCTTS 获得
+> In the Text-to-speech(TTS) task, the latent diffusion model
+ has excellent fidelity and generalization, but its expensive
+ resource consumption and slow inference speed have always
+ been a challenging. To address this issue, this paper pro
+poses the Discrete Diffusion Model with Contrastive Learn
+ing for Text-to-Speech Generation(DCTTS). Specifically, we
+ employs a straightforward and effective text encoder, com
+presses the raw data into discrete space using VQ model, and
+ then trains the diffusion model on the discrete space. In order
+ to minimize the number of diffusion steps needed to synthe
+sis high-quality speech, we used a contrastive learning loss
+ throughout the diffusion model training phase.The experi
+mental results demonstrate that the approach proposed in this
+ paper has outstanding speech synthesis quality and sampling
+ speed while significantly reducing the resource consumption
+ of diffusion model. The synthesized samples are available at
+ https://github.com/lawtherWu/DCTTS
+### DCTTS
+![img.png](img.png)
