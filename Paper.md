@@ -840,3 +840,28 @@ ___
 ![img.png](plot/ExtendingData.png)
 ####  Self-supervised speech-text pretraining and  unsupervised speech-text injection using untranscribed speech and unspoken text.
 ![img_1.png](plot/Self-supervisedSpeech-text.png)
+___
+## Noise-Robust Zero-Shot Text-to-Speech Synthesis Conditioned on Self-Supervised Speech-Representation Model with Adapters
+原文：https://ieeexplore.ieee.org/document/10447809
+### ABSTRACT
+零样本文本转语音 (TTS) 方法基于使用自监督学习 (SSL) 语音表示从参考语音中提取的说话人嵌入，可以非常准确地重现说话人的特征。然而，当参考语音包含噪声时，这种方法会导致语音合成质量下降。在本文中，我们提出了一种抗噪零样本 TTS 方法。我们将适配器合并到 SSL 模型中，并使用有噪声的参考语音与 TTS 模型一起对其进行微调。此外，为了进一步提高性能，我们采用了语音增强 (SE) 前端。通过这些改进，我们提出的基于 SSL 的零样本 TTS 实现了具有噪声参考语音的高质量语音合成。通过客观和主观评估，我们确认所提出的方法对参考语音中的噪声具有高度的鲁棒性，并且可以有效地与 SE 结合使用
+> The zero-shot text-to-speech (TTS) method, based on speaker em
+beddings extracted from reference speech using self-supervised
+ learning (SSL) speech representations, can reproduce speaker char
+acteristics very accurately. However, this approach suffers from
+ degradation in speech synthesis quality when the reference speech
+ contains noise. In this paper, we propose a noise-robust zero-shot
+ TTS method. We incorporated adapters into the SSL model, which
+ we fine-tuned with the TTS model using noisy reference speech. In
+ addition, to further improve performance, we adopted a speech en
+hancement (SE) front-end. With these improvements, our proposed
+ SSL-based zero-shot TTS achieved high-quality speech synthesis
+ with noisy reference speech. Through the objective and subjective
+ evaluations, we confirmed that the proposed method is highly robust
+ to noise in reference speech, and effectively works in combination
+ with SE.
+### MODEL
+#### Overview of SSL-based TTS model
+![img.png](plot/SSL-basedTTS.png)
+#### Overview of adapters.
+![img_1.png](OverviewAdapters..png)
