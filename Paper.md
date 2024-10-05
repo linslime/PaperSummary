@@ -712,3 +712,26 @@ vides quantitative control of emotion over the speech constituents.
 trol.
 ### MODEL
 ![img.png](plot/HierarchicalEmotionPredictionAndControl.png)
+___
+## Energy-Based Models for Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10447218  
+### ABSTRACT
+最近，人们对非自回归 (非 AR) 语音合成模型产生了浓厚的兴趣，例如 FastSpeech 2 和扩散模型。与 AR 模型不同，这些模型在输出之间没有自回归依赖关系，这使得推理效率更高。本文通过另一个称为基于能量的模型 (EBM) 的成员扩展了可用的非 AR 模型的范围。本文描述了如何使用依赖于正样本和负样本之间比较的噪声对比估计来训练 EBM。它提出了许多生成有效负样本的策略，包括使用高性能 AR 模型。它还描述了如何使用朗之万马尔可夫链蒙特卡罗 (MCMC) 从 EBM 进行采样。使用朗之万 MCMC 能够在 EBM 和当前流行的扩散模型之间建立联系。在 LJSpeech 数据集上的实验表明，所提出的方法比 Tacotron 2 有所改进。
+> Recently there has been a lot of interest in non-autoregressive (non
+AR)modelsforspeech synthesis, such as FastSpeech 2 and diffusion
+ models. Unlike AR models, these models do not have autoregressive
+ dependencies among outputs which makes inference efficient. This
+ paper expands the range of available non-AR models with another
+ member called energy-based models (EBMs). The paper describes
+ how noise contrastive estimation, which relies on the comparison
+ between positive and negative samples, can be used to train EBMs.
+ It proposes a number of strategies for generating effective negative
+ samples, including using high-performing AR models. It also de
+scribes how sampling from EBMs can be performed using Langevin
+ Markov Chain Monte-Carlo (MCMC). The use of Langevin MCMC
+ enables to draw connections between EBMs and currently popular
+ diffusion models. Experiments on LJSpeech dataset show that the
+ proposed approach offers improvements over Tacotron 2.
+### MODEL
+![img.png](plot/EBMs.png)
+___
