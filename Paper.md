@@ -735,3 +735,31 @@ scribes how sampling from EBMs can be performed using Langevin
 ### MODEL
 ![img.png](plot/EBMs.png)
 ___
+## Improving Language Model-Based Zero-Shot Text-to-Speech Synthesis with Multi-Scale Acoustic Prompts
+原文：https://ieeexplore.ieee.org/document/10447815
+### ABSTRACT
+零样本文本转语音 (TTS) 合成旨在无需自适应参数即可克隆任何未见过的说话者的声音。通过将语音波形量化为离散的声学标记并使用语言模型对这些标记进行建模，最近基于语言模型的 TTS 模型仅使用未见过的说话者的 3 秒声学提示就表现出零样本说话者自适应能力。然而，它们受到声学提示长度的限制，这使得克隆个人说话风格变得困难。在本文中，我们提出了一种基于语言模型的多尺度声学提示的新型零样本 TTS 模型。提出了一种说话者感知文本编码器，以从由多个句子组成的风格提示中学习音素级别的个人说话风格。随后，使用基于 VALL-E 的声学解码器从帧级别的音色提示中建模音色并生成语音。实验结果表明，我们提出的方法在自然度和说话人相似度方面优于基线，并且可以通过扩展到更长的风格提示1来获得更好的性能。
+> Zero-shot text-to-speech (TTS) synthesis aims to clone any un
+seen speaker’s voice without adaptation parameters. By quantizing
+ speech waveform into discrete acoustic tokens and modeling these
+ tokens with the language model, recent language model-based TTS
+ models show zero-shot speaker adaptation capabilities with only
+ a 3-second acoustic prompt of an unseen speaker. However, they
+ are limited by the length of the acoustic prompt, which makes it
+ difficult to clone personal speaking style. In this paper, we propose
+ a novel zero-shot TTS model with the multi-scale acoustic prompts
+ based on a language model. A speaker-aware text encoder is pro
+posed to learn the personal speaking style at the phoneme-level from
+ the style prompt consisting of multiple sentences. Following that,
+ a VALL-E based acoustic decoder is utilized to model the timbre
+ from the timbre prompt at the frame-level and generate speech. The
+ experimental results show that our proposed method outperforms
+ baselines in terms of naturalness and speaker similarity, and can
+ achieve better performance by scaling out to a longer style prompt1.
+### MODEL
+#### The overall architecture of the proposed model
+![img.png](plot/Multi-ScaleMODEL.png)
+#### The structure of the speaker-aware text encoder
+![img_1.png](plot/Speaker-awareTextEncoder.png)
+#### The structure of the acoustic decoder
+![img_2.png](plot/AcousticDecoder.png)
