@@ -763,3 +763,30 @@ posed to learn the personal speaking style at the phoneme-level from
 ![img_1.png](plot/Speaker-awareTextEncoder.png)
 #### The structure of the acoustic decoder
 ![img_2.png](plot/AcousticDecoder.png)
+___
+## Stylespeech: Self-Supervised Style Enhancing with VQ-VAE-Based Pre-Training for Expressive Audiobook Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10446352
+### ABSTRACT
+有声读物的合成语音的表现力受到训练数据中广义的模型架构和不均衡的风格分布的限制。为了解决这些问题，本文提出了一种基于 VQ VAE 预训练的自监督风格增强方法，用于富有表现力的有声读物语音合成。
+首先，使用大量未标记的纯文本数据对文本风格编码器进行预训练。其次，以自监督的方式对基于 VQ-VAE 的频谱图风格提取器进行预训练，使用大量涵盖复杂风格变化的音频数据。然后在风格提取器的指导下，专门设计了一种具有两个编码器-解码器路径的新型架构，分别对发音和高级风格表现力进行建模。客观和主观评价均表明，我们提出的方法可以有效提高有声读物合成中合成语音的自然度和表现力，特别是对于角色和域外场景。
+> The expressive quality of synthesized speech for audiobooks is lim
+ited by generalized model architecture and unbalanced style dis
+tribution in the training data. To address these issues, in this pa
+per, we propose a self-supervised style enhancing method with VQ
+VAE-based pre-training for expressive audiobook speech synthesis.
+ Firstly, a text style encoder is pre-trained with a large amount of un
+labeled text-only data. Secondly, a spectrogram style extractor based
+ on VQ-VAE is pre-trained in a self-supervised manner, with plenty
+ of audio data that covers complex style variations. Then a novel ar
+chitecture with two encoder-decoder paths is specially designed to
+ model the pronunciation and high-level style expressiveness respec
+tively, with the guidance of the style extractor. Both objective and
+ subjective evaluations demonstrate that our proposed method can ef
+fectively improve the naturalness and expressiveness of the synthe
+sized speech in audiobook synthesis especially for the role and out
+of-domain scenarios.
+### MODEL
+#### Proposed model structure
+![img.png](plot/Stylespeech.png)
+#### Style Extractor based on VQ-VAE
+![img_1.png](plot/StyleExtractorBasedOnVQ-VAE.png)
