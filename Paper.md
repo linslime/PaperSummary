@@ -654,4 +654,39 @@ art (SOTA) performance in all modules.
 #### Our unified front-end framework
 ![img.png](plot/front-endFramework.png)
 #### G2P module workflow
-![img_1.png](G2PModuleWorkflow.png)
+![img_1.png](plot/G2PModuleWorkflow.png)
+___
+## Minimally-Supervised Speech Synthesis with Conditional Diffusion Model and Language Model: A Comparative Study of Semantic Coding
+原文：https://ieeexplore.ieee.org/document/10446203
+### ABSTRACT
+最近，人们对文本转语音 (TTS) 方法的兴趣日益浓厚，该方法可以通过结合两种离散语音表示并使用两个序列到序列任务来解耦 TTS，从而以最少的监督进行训练。然而，现有方法存在三个问题：离散语音表示的高频波形失真、非自回归框架中的持续时间预测模型引起的韵律平均问题以及现有语义编码方法的信息冗余和维度爆炸导致的预测困难。为了解决这些问题，提出了三种渐进方法。首先，我们提出了 Diff-LM-Speech，这是一种由语言模型和扩散模型组成的自回归结构，它基于扩散模型对梅尔谱图中的语义嵌入进行建模，以实现更高的音频质量。我们还引入了一种基于变分自动编码器和韵律瓶颈的提示编码器结构，以提高提示表示能力。其次，我们提出了 Tetra-Diff-Speech，这是一种非自回归结构，由四个基于扩散模型的模块组成，设计了一个持续时间扩散模型来实现多样化的韵律表达。最后，我们提出了 Tri-Diff-Speech，这是一种非自回归结构，由三个基于扩散模型的模块组成，验证了现有语义编码模型的非必要性并取得了最佳效果。实验结果表明，我们提出的方法优于基线方法。我们提供了一个带有音频样本的网站。
+> Recently, there has been a growing interest in text-to-speech (TTS)
+ methods that can be trained with minimal supervision by com
+bining two types of discrete speech representations and using two
+ sequence-to-sequence tasks to decouple TTS. However, existing
+ methods suffer from three problems: the high-frequency wave
+form distortion of discrete speech representations, the prosodic
+ averaging problem caused by the duration prediction model in
+ non-autoregressive frameworks, and difficulty in prediction due to
+ the information redundancy and dimension explosion of existing
+ semantic coding methods. To address these problems, three pro
+gressive methods are proposed. First, we propose Diff-LM-Speech,
+ an autoregressive structure consisting of a language model and
+ diffusion models, which models the semantic embedding into the
+ mel-spectrogram based on a diffusion model to achieve higher audio
+ quality. We also introduce a prompt encoder structure based on a
+ variational autoencoder and a prosody bottleneck to improve prompt
+ representation ability. Second, we propose Tetra-Diff-Speech, a
+ non-autoregressive structure consisting of four diffusion model
+based modules that design a duration diffusion model to achieve
+ diverse prosodic expressions. Finally, we propose Tri-Diff-Speech,
+ a non-autoregressive structure consisting of three diffusion model
+based modules that verify the non-necessity of existing semantic
+ coding models and achieve the best results. Experimental results
+ show that our proposed methods outperform baseline methods. We
+ provide a website with audio samples. 
+### MODEL
+#### The architecture of proposed models.
+![img.png](plot/proposed_models.png)
+#### The architecture of acoustic diffusion model.
+![img_1.png](plot/AcousticDiffusionModel.png)
