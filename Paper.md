@@ -502,3 +502,131 @@ VCwith a real-time factor of 0.05 using a single-core CPU.
 ![img_1.png](plot/Convnext-TTS.png)
 #### Network architectures of neural vocoder
 ![img.png](plot/NeuralVocoder.png)
+___
+## Transfer the Linguistic Representations from TTS to Accent Conversion with Non-Parallel Data
+原文：https://ieeexplore.ieee.org/document/10447205
+### ABSTRACT
+口音转换旨在将源语音的口音转换为目标口音，同时保留说话者的身份。本文介绍了一种新颖的非自回归口音转换框架，该框架学习与口音无关的语言表示，并使用它们来转换源语音中的口音。具体而言，所提出的系统将语音表示与从文本到语音 (TTS) 系统获得的语言表示对齐，从而能够在非并行数据上训练口音语音转换模型。此外，我们研究了在我们提出的框架内对本机数据和不同声学特征进行预训练策略的有效性。我们使用主观和客观指标进行全面评估，以评估我们方法的性能。评估结果突出了预训练策略和结合更丰富的语义特征的好处，从而显着提高了音频质量和清晰度 1。
+>Accent conversion aims to convert the accent of a source
+ speech to a target accent, meanwhile preserving the speaker’s
+ identity. This paper introduces a novel non-autoregressive
+ framework for accent conversion that learns accent-agnostic
+ linguistic representations and employs them to convert the
+ accent in the source speech. Specifically, the proposed sys
+tem aligns speech representations with linguistic representa
+tions obtained from Text-to-Speech (TTS) systems, enabling
+ training of the accent voice conversion model on non-parallel
+ data. Furthermore, we investigate the effectiveness of a pre
+training strategy on native data and different acoustic features
+ within our proposed framework. We conduct a comprehen
+sive evaluation using both subjective and objective metrics to
+ assess the performance of our approach. The evaluation re
+sults highlight the benefits of the pretraining strategy and the
+ incorporation of richer semantic features, resulting in signifi
+cantly enhanced audio quality and intelligibility 1.
+### Model Architecture
+![img.png](plot/TransferLinguisticRepresentations.png)
+___
+## PromptTTS++: Controlling Speaker Identity in Prompt-Based Text-To-Speech Using Natural Language Descriptions
+原文：https://ieeexplore.ieee.org/document/10448173
+### ABSTRACT
+我们提出了 PromptTTS++，这是一个基于提示的文本转语音 (TTS) 合成系统，它允许使用自然语言描述来控制说话者身份。为了在基于提示的 TTS 框架内控制说话者身份，我们引入了说话者提示的概念，它描述了语音特征（例如，性别中立、年轻、年老和低沉），旨在与说话风格大致无关。由于没有包含说话者提示的大规模数据集，我们首先基于 LibriTTS-R 语料库构建一个带有手动注释说话者提示的数据集。然后，我们采用基于扩散的声学模型和混合密度网络来模拟训练数据中的不同说话者因素。与以前的研究不同，这些研究依赖于仅描述说话者个性的有限方面（例如音调、说话速度和能量），我们的方法利用额外的说话者提示来有效地学习从自然语言描述到不同说话者的声学特征的映射。我们的主观评估结果表明，与没有说话人提示的方法相比，所提出的方法可以更好地控制说话人特征。音频样本可在 https://reppy4620.github.io/demo.promptttspp/ 获得。
+> We propose PromptTTS++, a prompt-based text-to-speech (TTS)
+ synthesis system that allows control over speaker identity us
+ing natural language descriptions. To control speaker identity
+ within the prompt-based TTS framework, we introduce the con
+cept of speaker prompt, which describes voice characteristics (e.g.,
+ gender-neutral, young, old, and muffled) designed to be approxi
+mately independent of speaking style. Since there is no large-scale
+ dataset containing speaker prompts, we first construct a dataset
+ based on the LibriTTS-R corpus with manually annotated speaker
+ prompts. We then employ a diffusion-based acoustic model with
+ mixture density networks to model diverse speaker factors in the
+ training data. Unlike previous studies that rely on style prompts
+ describing only a limited aspect of speaker individuality, such
+ as pitch, speaking speed, and energy, our method utilizes an ad
+ditional speaker prompt to effectively learn the mapping from
+ natural language descriptions to the acoustic features of diverse
+ speakers. Our subjective evaluation results show that the proposed
+ method can better control speaker characteristics than the meth
+ods without the speaker prompt. Audio samples are available at
+ https://reppy4620.github.io/demo.promptttspp/.
+###  PromptTTS++
+![img_1.png](plot/PromptTTS++.png)
+___
+## Mels-Tts : Multi-Emotion Multi-Lingual Multi-Speaker Text-To-Speech System Via Disentangled Style Tokens
+原文：https://ieeexplore.ieee.org/document/10446852
+### ABSTRACT
+本文提出了一种多情感、多语言和多说话人的文本转语音 (MELS-TTS) 系统，采用解开的风格标记来实现有效的情感传递。在包含各种属性（例如情绪状态、说话者身份和语言风格）的语音中，解开这些元素对于高效的多情感、多语言和多说话人的 TTS 系统至关重要。为了实现这一目的，我们建议利用单独的风格标记来解开情感、语言、说话者和残留信息，这受到全局风格标记 (GST) 的启发。通过注意机制，每个风格标记从目标语音中学习其各自的语音属性。我们提出的方法在客观和主观评价中都提高了性能，展示了能够生成具有多种情感的跨语言语音的能力，即使是来自中性的源说话者，同时保留说话者的身份。
+> This paper proposes a multi-emotion, multi-lingual, and multi
+speaker text-to-speech (MELS-TTS) system, employing disentan
+gled style tokens for effective emotion transfer. In speech encom
+passing various attributes, such as emotional state, speaker identity,
+ and linguistic style, disentangling these elements is crucial for an
+ efficient multi-emotion, multi-lingual, and multi-speaker TTS sys
+tem. To accomplish this purpose, we propose to utilize separate style
+ tokens to disentangle emotion, language, speaker, and residual in
+formation, inspired by the global style tokens (GSTs). Through the
+ attention mechanism, each style token learns its respective speech
+ attribute from the target speech. Our proposed approach yields im
+proved performance in both objective and subjective evaluations,
+ demonstrating the ability to generate cross-lingual speech with di
+verse emotions, even from a neutral source speaker, while preserving
+ the speaker’s identity.
+###  MELS-TTS
+![img.png](plot/MELS-TTS.png)
+___
+## Fastmandarin: Efficient Local Modeling for Natural Mandarin Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10446112
+### ABSTRACT
+基于注意力机制的语音合成方法通常会受到整个输入序列注意力分散的影响，导致局部建模效果不佳和普通话合成语音不自然。为了解决这些问题，我们提出了 FastMandarin，这是一个快速自然的普通话语音合成框架，它采用两种显式方法来增强局部建模和改善发音表征。首先，我们标记中文字符以在句子内划定短语边界，这些标记在每个时间步骤中集成到网络的隐藏层特征中，有效地增强了潜在表征中的局部贡献。其次，我们引入了一个多尺度上下文特征提取器网络，该网络采用并行卷积和各种滤波器。此外，我们优化了持续时间对齐和梅尔频谱图重建，以提高整体性能。实验结果表明，FastMandarin 在局部建模方面表现出色，可提供强大的普通话语音合成结果。
+> Attention-based speech synthesis methods often suffer from
+ dispersed attention across the entire input sequence, resulting
+ in poor local modeling and unnatural Mandarin synthesized
+ speech. To address these issues, we present FastMandarin, a
+ rapid and natural Mandarin speech synthesis framework that
+ employs two explicit methods to enhance local modeling and
+ improve pronunciation representation. Firstly, we tag Chi
+nese characters to delineate phrase boundaries within a sen
+tence, and these tags are integrated into the network’s hidden
+ layer features at each time step, effectively bolstering local
+ contributions in latent representations. Secondly, we intro
+duce a multi-scale context feature extractor network that em
+ploys parallel convolution with various filters. Additionally,
+ we optimize duration alignment and Mel-spectrogram recon
+struction to enhance overall performance. Experimental re
+sults demonstrate that FastMandarin excels in local modeling,
+ delivering robust Mandarin speech synthesis results.
+### FASTMANDARIN
+![img_1.png](plot/FASTMANDARIN.png)
+___
+## Ultra-Lightweight Neural Differential DSP Vocoder for High Quality Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10447948
+### ABSTRACT
+神经声码器对原始音频波形进行建模并合成高质量音频，但即使是 MB-MelGAN 和 LPCNet 等高效声码器也无法在智能眼镜等低端设备上实时运行。纯数字信号处理 (DSP) 声码器可以通过轻量级快速傅里叶变换 (FFT) 实现，因此比任何神经声码器都快一个数量级。DSP 声码器通常会因消耗过度平滑的声学模型对声道近似表示的预测而获得较低的音频质量。在本文中，我们提出了一种超轻量级差分 DSP (DDSP) 声码器，它使用与 DSP 声码器联合优化的声学模型，并且在没有提取声道频谱特征的情况下进行学习。该模型实现了与神经声码器相当的音频质量，平均 MOS 高达 4.36，同时作为 DSP 声码器效率很高。我们的 C++ 实现，
+没有任何特定于硬件的优化，达到 15 MFLOPS，
+在 FLOPS 方面超过 MB-MelGAN 340 倍，并在 2GHz Intel Xeon CPU 上单线程运行时，实现了
+0.003 的仅声码器 RTF 和 0.044 的整体 RTF。
+> Neural vocoders modeltherawaudiowaveformandsynthesizehigh
+quality audio, but even the highly efficient ones, like MB-MelGAN
+ and LPCNet, fail to run real-time on a low-end device like a smart
+glass. A pure digital signal processing (DSP) based vocoder can
+ be implemented via lightweight fast Fourier transforms (FFT), and
+ therefore, is a magnitude faster than any neural vocoder. A DSP
+ vocoder often gets a lower audio quality due to consuming over
+smoothed acoustic model predictions of approximate representations
+ for the vocal tract. In this paper, we propose an ultra-lightweight dif
+ferential DSP (DDSP) vocoder that uses a jointly optimized acoustic
+ model with a DSP vocoder, and learns without an extracted spec
+tral feature for the vocal tract. The model achieves audio quality
+ comparable to neural vocoders with a high average MOS of 4.36
+ while being efficient as a DSP vocoder. Our C++ implementation,
+ without any hardware-specific optimization, is at 15 MFLOPS, sur
+passes MB-MelGAN by 340 times in terms of FLOPS, and achieves
+ a vocoder-only RTF of 0.003 and overall RTF of 0.044 while running
+ single-threaded on a 2GHz Intel Xeon CPU.
+### DSP
+#### DSP模型
+![img.png](plot/DSP.png)
+#### Source-Filter Model
+![img_1.png](plot/Source-FilterModel.png)
