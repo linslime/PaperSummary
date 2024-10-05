@@ -790,3 +790,53 @@ of-domain scenarios.
 ![img.png](plot/Stylespeech.png)
 #### Style Extractor based on VQ-VAE
 ![img_1.png](plot/StyleExtractorBasedOnVQ-VAE.png)
+___
+## Speak While You Think: Streaming Speech Synthesis During Text Generation
+原文：https://ieeexplore.ieee.org/document/10446214
+### ABSTRACT
+大型语言模型 (LLM) 展示了令人印象深刻的功能，但与这些模型的交互主要通过文本进行。使用文本转语音来合成 LLM 输出通常会导致明显的延迟，这对于流畅的语音对话来说是不切实际的。我们提出了 LLM2Speech，这是一种在 LLM 生成文本的同时合成语音的架构，可显著减少延迟。LLM2Speech 模仿非流式教师模型的预测，同时限制对未来上下文的接触以实现流式传输。它利用了 LLM 的隐藏嵌入，这是文本生成的副产品，其中包含信息丰富的语义上下文。实验结果表明，LLM2Speech 在保持教师质量的同时降低了延迟，从而实现了自然对话。
+> Large Language Models (LLMs) demonstrate impressive
+ capabilities, yet interaction with these models is mostly facil
+itated through text. Using Text-To-Speech to synthesize LLM
+ outputs typically results in notable latency, which is impracti
+cal for fluent voice conversations. We propose LLM2Speech,
+ an architecture to synthesize speech while text is being gen
+erated by an LLM which yields significant latency reduc
+tion. LLM2Speech mimics the predictions of a non-streaming
+ teacher model while limiting the exposure to future context in
+ order to enable streaming. It exploits the hidden embeddings
+ of the LLM, a by-product of the text generation that contains
+ informative semantic context. Experimental results show that
+ LLM2Speech maintains the teacher’s quality while reducing
+ the latency to enable natural conversations.
+### MODEL
+#### Streaming speech synthesis during text generation.
+![img.png](plot/StreamingSpeechSynthesis.png)
+#### Dataset creation.
+![img_1.png](plot/DatasetCreation.png)
+___
+## Extending Multilingual Speech Synthesis to 100+ Languages without Transcribed Data
+原文：https://ieeexplore.ieee.org/document/10448074
+### ABSTRACT
+收集高质量的录音室录音是一项挑战，这限制了文本转语音 (TTS) 系统的语言覆盖范围。
+本文提出了一个框架，使用无监督的现有数据将多语言 TTS 模型扩展到 100 多种语言。所提出的框架将语音文本编码器预训练与使用未转录语音和未说出的文本数据源的无监督训练相结合，从而利用大规模多语言联合语音和文本表示学习。无需任何新语言的转录语音，此 TTS 模型就可以生成 30 多种未见过的语言的可理解语音（与真实值的 CER 差异为 10%）。
+仅需 15 分钟的转录和现有数据，我们就可以将可理解性差异降低到与真实值的 1% 或更低，并在几种语言中获得与真实值相匹配的自然度分数
+> Collecting high-quality studio recordings ofaudioischallenging,
+ which limits the language coverage of text-to-speech (TTS) systems.
+ This paper proposes a framework for scaling a multilingual TTS
+ model to 100+ languages using found data without supervision. The
+ proposed framework combines speech-text encoder pretraining with
+ unsupervised training using untranscribed speech and unspoken text
+ data sources, thereby leveraging massively multilingual joint speech
+ and text representation learning. Without any transcribed speech in
+ a new language, this TTS model can generate intelligible speech in
+ >30 unseen languages (CER difference of 10% to ground truth).
+ With just 15 minutes of transcribed, found data, we can reduce the
+ intelligibility difference to 1% or less from the ground-truth, and
+ achieve naturalness scores that match the ground-truth in several
+ languages
+### MODEL
+#### Supervised learning with paired speech-text data.
+![img.png](plot/ExtendingData.png)
+####  Self-supervised speech-text pretraining and  unsupervised speech-text injection using untranscribed speech and unspoken text.
+![img_1.png](plot/Self-supervisedSpeech-text.png)
