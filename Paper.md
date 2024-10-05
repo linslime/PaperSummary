@@ -690,3 +690,25 @@ based modules that verify the non-necessity of existing semantic
 ![img.png](plot/proposed_models.png)
 #### The architecture of acoustic diffusion model.
 ![img_1.png](plot/AcousticDiffusionModel.png)
+___
+## Hierarchical Emotion Prediction and Control in Text-to-Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10445996
+### ABSTRACT
+有效控制文本转语音 (TTS) 合成中的情感渲染仍然是一个挑战。先前的研究主要集中于学习话语层面的全局韵律表征，这与语言韵律密切相关。我们的目标是构建一个分层的情感分布 (ED)，有效地封装不同粒度级别的情感强度变化，包括音素、单词和话语。在 TTS 训练期间，从真实音频中提取分层 ED，并指导预测器建立情感和语言韵律之间的联系。在运行时推理时，TTS 模型会生成情感语音，同时对语音成分的情感进行定量控制。客观和主观评价都验证了所提出的框架在情感预测和控制方面的有效性。
+> It remains a challenge to effectively control the emotion rendering
+ in text-to-speech (TTS) synthesis. Prior studies have primarily fo
+cused on learning a global prosodic representation at the utterance
+ level, which strongly correlates with linguistic prosody. Our goal
+ is to construct a hierarchical emotion distribution (ED) that effec
+tively encapsulates intensity variations of emotions at various levels
+ of granularity, encompassing phonemes, words, and utterances. Dur
+ing TTS training, the hierarchical ED is extracted from the ground
+truth audio and guides the predictor to establish a connection be
+tween emotional and linguistic prosody. At run-time inference, the
+ TTS model generates emotional speech and, at the same time, pro
+vides quantitative control of emotion over the speech constituents.
+ Both objective and subjective evaluations validate the effectiveness
+ of the proposed framework in terms of emotion prediction and con
+trol.
+### MODEL
+![img.png](plot/HierarchicalEmotionPredictionAndControl.png)
