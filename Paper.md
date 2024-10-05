@@ -471,3 +471,34 @@ eration of acoustically clearer voices
 ![img.png](plot/CM-VC.png)
 #### MM-TTS Framework
 ![img_1.png](plot/MM-TTS.png)
+___
+## Convnext-TTS And Convnext-VC: Convnext-Based Fast End-To-End Sequence-To-Sequence Text-To-Speech And Voice Conversion
+原文：https://ieeexplore.ieee.org/document/10446890
+### ABSTRACT
+端到端 (E2E) 序列到序列 (S2S) 神经文本到语音 (TTS) 模型和 E2E-S2S 神经语音转换 (VC) 模型可以通过单个神经网络实现高质量的语音合成。为了进一步提高 E2E-S2S TTS 和 VC 模型的合成质量并提高其推理速度，我们提出了一种基于无 Transformer ConvNeXt 的编码器和解码器。此外，为了进一步提高推理速度，我们提出了 ConvNeXt-TTS 和 ConvNeXt-VC，其中包括 WaveNeXt 神经声码器。这也是由 ConvNeXt 块构建的，并且可以实现比 HiFi-GAN 更快的合成速度。使用 Hi-Fi-CAPTAIN 语料库对 E2E-S2S
+TTS 和 E2E-S2S-VC 条件进行的实验结果表明，所提出的基于 ConvNeXt 的编码器和解码器的推理速度比基于 Transformer 的编码器和解码器快三倍，同时提高了合成质量。特别是，ConvNeXt-TTS 和 ConvNeXt-VC 可以在单核 CPU 上实现非常快速的 E2E-S2S-TTS 和 E2E-S2S
+VC，实时系数为 0.05。
+>End-to-end (E2E) sequence-to-sequence (S2S) neural text-to-speech
+ (TTS) models and E2E-S2S neural voice conversion (VC) mod
+els can achieve high-quality speech synthesis with a single neural
+ network. To further improve the synthesis quality of E2E-S2S
+ TTS and VC models and increase their inference speed, we pro
+pose a Transformer-free ConvNeXt-based encoder and decoder.
+ Additionally, to further increase the inference speed, we propose
+ ConvNeXt-TTS and ConvNeXt-VC, which include the WaveNeXt
+ neural vocoder. This is also constructed from ConvNeXt blocks
+ and can achieve much faster synthesis than HiFi-GAN. The results
+ of experiments using the Hi-Fi-CAPTAIN corpus for the E2E-S2S
+TTS and E2E-S2S-VC conditions demonstrate that the proposed
+ ConvNeXt-based encoder and decoder can perform inference three
+ times faster than a Transformer-based encoder and decoder while
+ improving the synthesis quality. In particular, ConvNeXt-TTS and
+ ConvNeXt-VC can achieve very fast E2E-S2S-TTS and E2E-S2S
+VCwith a real-time factor of 0.05 using a single-core CPU.
+### Convnext-TTS
+#### ConvNext block
+![img.png](plot/ConvNextBlock.png)
+####  Network architectures of end-to-end sequence-to-sequence text-to-speech and voice conversion models. 
+![img_1.png](plot/Convnext-TTS.png)
+#### Network architectures of neural vocoder
+![img.png](plot/NeuralVocoder.png)
