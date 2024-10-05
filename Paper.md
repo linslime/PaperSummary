@@ -407,3 +407,39 @@ domain SED to accurately predict soft labels, addressing the
  datasets for supervising emotional TTS training.
 ### ED-TTS
 ![img.png](plot/ED-TTS.png)
+___
+## Spontts: Modeling and Transferring Spontaneous Style for TTS
+原文：https://ieeexplore.ieee.org/document/10445828
+### ABSTRACT
+自发说话风格与其他说话风格有显著差异，这是由于各种自发现象（例如，填充停顿、延长）和大量的韵律变化（例如，不同的音调和持续时间变化，偶尔的非语言语音，如微笑），对自发风格的建模和预测提出了挑战。此外，高质量自发数据的限制限制了没有自发数据的说话者的自发语音生成。为了解决这些问题，我们提出了 SponTTS，这是一种基于神经瓶颈 (BN) 特征的两阶段方法，用于为 TTS 建模和传输自发风格。在第一阶段，我们采用条件变分自动编码器 (CVAE) 从 BN 特征中捕获自发韵律，并通过自发现象嵌入预测损失的约束来涉及自发现象。此外，我们引入了一个基于流的预测器来从文本中预测潜在的自发风格表征，从而丰富了推理过程中的韵律和特定于上下文的自发现象。在第二阶段，我们采用类似 VITS 的模块将第一阶段学习到的自发风格迁移到目标说话者。实验表明，SponTTS 能够有效地对自发风格进行建模，并将风格迁移到目标说话者，生成具有高自然度、表现力和说话者相似度的自发语音。零样本自发风格 TTS 测试进一步验证了 SponTTS 在为看不见的说话者生成自发语音方面的泛化和鲁棒性。
+> Spontaneous speaking style exhibits notable differences from other
+ speaking styles due to various spontaneous phenomena (e.g., filled
+ pauses, prolongation) and substantial prosody variation (e.g., diverse
+ pitch and duration variation, occasional non-verbal speech like a
+ smile), posing challenges to modeling and prediction of spontaneous
+ style. Moreover, the limitation of high-quality spontaneous data con
+strains spontaneous speech generation for speakers without sponta
+neous data. To address these problems, we propose SponTTS, a two
+stage approach based on neural bottleneck (BN) features to model
+ and transfer spontaneous style for TTS. In the first stage, we adopt
+ a Conditional Variational Autoencoder (CVAE) to capture sponta
+neous prosody from a BN feature and involve the spontaneous phe
+nomena by the constraint of spontaneous phenomena embedding
+ prediction loss. Besides, we introduce a flow-based predictor to pre
+dict a latent spontaneous style representation from the text, which
+ enriches the prosody and context-specific spontaneous phenomena
+ during inference. In the second stage, we adopt a VITS-like mod
+ule to transfer the spontaneous style learned in the first stage to the
+ target speakers. Experiments demonstrate that SponTTS is effective
+ in modeling spontaneous style and transferring the style to the tar
+get speakers, generating spontaneous speech with high naturalness,
+ expressiveness, and speaker similarity. The zero-shot spontaneous
+ style TTS test further verifies the generalization and robustness of
+ SponTTS in generating spontaneous speech for unseen speakers.
+### SPONTTS
+#### The overview of SponTTS
+![img.png](plot/SponTTS.png)
+#### Text2BN
+![img.png](plot/Text2BN.png)
+#### BN2Wave
+![img.png](plot/BN2Wave.png)
