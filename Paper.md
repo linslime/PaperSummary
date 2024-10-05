@@ -443,3 +443,31 @@ get speakers, generating spontaneous speech with high naturalness,
 ![img.png](plot/Text2BN.png)
 #### BN2Wave
 ![img.png](plot/BN2Wave.png)
+___
+## Enhancing Multilingual TTS with Voice Conversion Based Data Augmentation and Posterior Embedding
+原文：https://ieeexplore.ieee.org/document/10448471
+### ABSTRACT
+本文提出了一种多语言、多说话人 (MM) TTS 系统，该系统采用基于语音转换 (VC) 的数据增强方法。由于从多个说话人那里收集多语言数据非常困难，因此创建 MM-TTS 模型具有挑战性。为了解决这个问题，我们采用了一种跨语言、多说话人 VC 模型，该模型使用多个说话人的单语数据库进行训练。由于该模型有效地传输了声学属性，同时保留了内容信息，因此可以生成每个说话人的多语言语料库。随后，我们设计了基于变分自动编码器 (VAE) 的后验嵌入的 MM-TTS 模型。需要注意的是，将 VC 增强的多语言语料库纳入 TTS 训练过程可能会降低合成质量，因为语料库有时包含不需要的伪影。为了缓解这个问题，VAE 经过训练以捕捉录制数据集和 VC 增强数据集之间的声学​​差异。通过选择性地选择从训练集中的原始录音中获得的后验嵌入，所提出的模型能够生成听觉更清晰的声音。
+> This paper proposes a multilingual, multi-speaker (MM) TTS
+ system by using a voice conversion (VC)-based data augmentation
+ method. Creating an MM-TTS model is challenging, owing to the
+ difficulties of collecting polyglot data from multiple speakers. To
+ address this problem, we adopt a cross-lingual, multi-speaker VC
+ model trained with multiple speakers’ monolingual databases. As
+ this model effectively transfers acoustic attributes while retaining
+ the content information, it is possible to generate each speaker’s
+ polyglot corpora. Subsequently, we design the MM-TTS model
+ with variational autoencoder (VAE)-based posterior embeddings.
+ It is to be noted that incorporating VC-augmented polyglot corpora
+ into the TTS training process might degrade synthetic quality, since
+ the corpora sometimes contain unwanted artifacts. To mitigate this
+ issue, the VAE is trained to capture the acoustic dissimilarity be
+tween the recorded and VC-augmented datasets. Through the selec
+tive choice of the posterior embeddings obtained from the original
+ recordings in the training set, the proposed model enables the gen
+eration of acoustically clearer voices
+### MM-TTS 
+#### Data augmentation process using CM-VC.
+![img.png](plot/CM-VC.png)
+#### MM-TTS Framework
+![img_1.png](plot/MM-TTS.png)
