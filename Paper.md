@@ -630,3 +630,28 @@ passes MB-MelGAN by 340 times in terms of FLOPS, and achieves
 ![img.png](plot/DSP.png)
 #### Source-Filter Model
 ![img_1.png](plot/Source-FilterModel.png)
+___
+## A Unified Front-End Framework for English Text-to-Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10447144
+### ABSTRACT
+前端是英语文本转语音 (TTS) 系统的重要组成部分，负责提取文本转语音模型合成语音所必需的语言特征，例如韵律和音素。英语 TTS 前端通常由文本规范化 (TN) 模块、韵律词韵律短语 (PWPP) 模块和字素到音素 (G2P) 模块组成。然而，目前对英语 TTS 前端的研究仅关注单个模块，忽略了它们之间的相互依赖性，导致每个模块的性能都不理想。因此，本文提出了一个统一的前端框架，用于捕获英语 TTS 前端模块之间的依赖关系。大量实验表明，所提出的方法在所有模块中都实现了最新 (SOTA) 性能。
+> The front-end is a critical component of English text-to
+speech (TTS) systems, responsible for extracting linguistic
+ features that are essential for a text-to-speech model to syn
+thesize speech, such as prosodies and phonemes. The English
+ TTS front-end typically consists of a text normalization (TN)
+ module, a prosody word prosody phrase (PWPP) module,
+ and a grapheme-to-phoneme (G2P) module. However, cur
+rent research on the English TTS front-end focuses solely
+ on individual modules, neglecting the interdependence be
+tween them and resulting in sub-optimal performance for
+ each module. Therefore, this paper proposes a unified front
+end framework that captures the dependencies among the
+ English TTS front-end modules. Extensive experiments have
+ demonstrated that the proposed method achieves state-of-the
+art (SOTA) performance in all modules.
+### MODEL
+#### Our unified front-end framework
+![img.png](plot/front-endFramework.png)
+#### G2P module workflow
+![img_1.png](G2PModuleWorkflow.png)
