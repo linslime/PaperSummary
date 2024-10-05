@@ -359,3 +359,51 @@ ditionally ensure each synthesis step is fast to run. The method
 ![img_1.png](plot/Matcha-TTS.png)
 #### Matcha-TTS decoder
 ![img_2.png](plot/Matcha-TTSDecoder.png)
+___
+## StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations
+原文：https://ieeexplore.ieee.org/document/10446023
+### ABSTRACT
+虽然声学表现力在表达性文本转语音 (ETTS) 中早已得到研究，但文本的固有表现力却缺乏足够的关注，尤其是对于艺术作品的 ETTS。在本文中，我们介绍了 StoryTTS，这是一个高度 ETTS 数据集，包含丰富的声学和文本表现力，来自普通话讲故事节目的录音。提出了一个系统而全面的文本表现力标记框架。我们通过语言学、修辞学等分析和定义 StoryTTS 中与语音相关的文本表现力，包括五个不同的维度。然后我们使用大型语言模型，并用一些手动注释示例提示它们进行批量注释。由此产生的语料库包含 61 小时的连续和高度韵律的语音，配备了准确的文本转录和丰富的文本表现力注释。因此，StoryTTS 可以帮助未来的 ETTS 研究充分挖掘丰富的内在文本和声学特征。实验验证了 TTS 模型与 StoryTTS 中的带注释的文本标签结合后能够生成表现力更强的语音。
+> While acoustic expressiveness has long been studied in expressive
+ text-to-speech (ETTS), the inherent expressiveness in text lacks suf
+f
+ icient attention, especially for ETTS of artistic works. In this pa
+per, we introduce StoryTTS, a highly ETTS dataset that contains
+ rich expressiveness both in acoustic and textual perspective, from the
+ recording of a Mandarin storytelling show. A systematic and com
+prehensive labeling framework is proposed for textual expressive
+ness. We analyze and define speech-related textual expressiveness
+ in StoryTTS to include five distinct dimensions through linguistics,
+ rhetoric, etc. Then we employ large language models and prompt
+ them with a few manual annotation examples for batch annotation.
+ The resulting corpus contains 61 hours of consecutive and highly
+ prosodic speech equipped with accurate text transcriptions and rich
+ textual expressiveness annotations. Therefore, StoryTTS can aid fu
+ture ETTS research to fully mine the abundant intrinsic textual and
+ acoustic features. Experiments are conducted to validate that TTS
+ models can generate speech with improved expressiveness when in
+tegrating with the annotated textual labels in StoryTTS.
+###  STORYTTS
+![img.png](plot/STORYTTS.png)
+___
+## ED-TTS: Multi-Scale Emotion Modeling Using Cross-Domain Emotion Diarization for Emotional Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10446467
+### ABSTRACT
+现有的情感语音合成方法通常利用从参考音频中提取的话语级风格嵌入，而忽略了语音韵律固有的多尺度特性。我们引入了 ED-TTS，这是一种多尺度情感语音合成模型，它利用语音情感分类 (SED) 和语音情感识别 (SER) 来对不同级别的情感进行建模。具体而言，我们提出的方法将 SER 提取的话语级情感嵌入与从 SED 获得的细粒度帧级情感嵌入相结合。这些嵌入用于调节去噪扩散概率模型 (DDPM) 的逆过程。此外，我们使用跨域 SED 来准确预测软标签，解决了监督情感 TTS 训练的细粒度情感注释数据集稀缺的挑战。
+>Existing emotional speech synthesis methods often utilize
+ an utterance-level style embedding extracted from refer
+ence audio, neglecting the inherent multi-scale property of
+ speech prosody. We introduce ED-TTS, a multi-scale emo
+tional speech synthesis model that leverages Speech Emotion
+ Diarization (SED) and Speech Emotion Recognition (SER) to
+ model emotions at different levels. Specifically, our proposed
+ approach integrates the utterance-level emotion embedding
+ extracted by SER with fine-grained frame-level emotion em
+bedding obtained from SED. These embeddings are used
+ to condition the reverse process of the denoising diffusion
+ probabilistic model (DDPM). Additionally, we employ cross
+domain SED to accurately predict soft labels, addressing the
+ challenge of a scarcity of fine-grained emotion-annotated
+ datasets for supervising emotional TTS training.
+### ED-TTS
+![img.png](plot/ED-TTS.png)
