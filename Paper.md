@@ -896,7 +896,7 @@ dio samples are available at: https://zxyzqs.github.io/.
 #### The structure of the voice conversion model.
 ![img_1.png](plot/voice_conversion_model.png)
 ___
-##  Considering Temporal Connection between Turns for Conversational Speech Synthesis
+## Considering Temporal Connection between Turns for Conversational Speech Synthesis
 原文：https://ieeexplore.ieee.org/document/10448356
 ### ABSTRACT
 对话语音合成旨在基于历史对话合成单个说话人的语音。然而，对话语音合成中的大多数研究仅关注当前说话人话轮的合成性能，而忽略了对话者话轮之间的时间关系。因此，我们在对话语音合成中考虑话轮之间的时间联系，这对于对话的自然性和连贯性至关重要。具体来说，本文制定了一个话轮之间没有重叠的任务，只考虑一个历史话轮。为了完成这项任务，提出了一个声学模型，该模型利用来自前一话轮的多模态（包括文本和语音）信息来预测当前话轮和话轮间间隙的声学特征。该模型基于 MQTTS 设计，在预测每帧的声学特征时结合了前一话轮的全局声学表示和基于 BERT 的局部语义表示。实验结果表明，通过引入全局声学信息和局部语义信息，我们的模型在转折之间的时间联系和合成语音质量方面取得了更好的表现。音频样本可以在https://mkd-mkd.github.io/icassp2024中找到。
@@ -928,3 +928,31 @@ thesis performance of the current speaker’s turn and neglect the
 ![img_1.png](plot/TheConversationalScenarioInOurTask.png)
 ####  An overview of our proposed approach to acoustic modeling considering turn connections.
 ![img_2.png](plot/AcousticModelingConsideringTurnConnections.png)
+___
+## DurIAN-E 2: Duration Informed Attention Network with Adaptive Variational Autoencoder and Adversarial Learning for Expressive Text-to-Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10448195
+### ABSTRACT
+本文提出了一种改进版的 DurIAN-E（DurIAN-E 2），它也是一个用于富有表现力和高保真度的文本转语音 (TTS) 合成的时长知情注意神经网络。与 DurIAN-E 模型类似，在所提出的 DurIAN-E 2 中，多个堆叠的基于 SwishRNN 的 Transformer 块被用作语言编码器，并且样式自适应实例规范化 (SAIN) 层也被利用到帧级编码器中，以提高表现力的建模能力。同时，受到其他使用生成模型（如 VITS）的 TTS 模型的启发，所提出的 DurIAN-E 2 利用增强了规范化流的变分自动编码器 (VAE) 和具有对抗性训练策略的 BigVGAN 波形生成器，进一步提高了合成语音的质量和表现力。客观测试和主观评价结果均证明，所提出的富有表现力的 TTS 模型 DurIAN-E 2 能够比除 DurIAN-E 之外的几种最先进的方法取得更好的性能。
+> This paper proposes an improved version of DurIAN-E
+ (DurIAN-E 2), which is also a duration informed attention
+ neural network for expressive and high-fidelity text-to-speech
+ (TTS) synthesis. Similar with the DurIAN-E model, multiple
+ stacked SwishRNN-based Transformer blocks are utilized
+ as linguistic encoders and Style-Adaptive Instance Normal
+ization (SAIN) layers are also exploited into frame-level
+ encoders to improve the modeling ability of expressiveness
+ in the proposed the DurIAN-E 2. Meanwhile, motivated by
+ other TTS models using generative models such as VITS,
+ the proposed DurIAN-E 2 utilizes variational autoencoders
+ (VAEs) augmented with normalizing flows and a BigVGAN
+ waveform generator with adversarial training strategy, which
+ further improve the synthesized speech quality and expres
+siveness. Both objective test and subjective evaluation results
+ prove that the proposed expressive TTS model DurIAN-E 2
+ can achieve better performance than several state-of-the-art
+ approaches besides DurIAN-E.
+### MODEL
+#### Model structures of DurIAN-E (shown in red dashed box)and DurIAN-E2(shown in green dashed box).
+![img.png](plot/DurIAN-E.png)
+#### Blocks used in the encoders of DurIAN-E2
+![img_1.png](plot/DurIAN-E2Encoder.png)
