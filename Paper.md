@@ -865,3 +865,33 @@ hancement (SE) front-end. With these improvements, our proposed
 ![img.png](plot/SSL-basedTTS.png)
 #### Overview of adapters.
 ![img_1.png](OverviewAdapters..png)
+___
+## An Experimental Comparison of Noise-Robust Text-To-Speech Synthesis Systems Based On Self-Supervised Representation
+原文：https://ieeexplore.ieee.org/document/10446750An 
+### ABSTRACT
+随着深度学习的进步，使用干净语音的文本转语音 (TTS) 性能得到了显著提升。由于在真实场景中采集的数据通常包含噪声，因此需要进行去噪，在增强语音上训练的 TTS 模型会受到失真和残留噪声的影响，从而影响合成语音的质量。同时，自监督预训练模型在许多任务中表现出良好的噪声稳健性，表明学习到的表示对噪声扰动具有更高的容忍度。结果表明，基于 WavLM 的表示对于语音合成具有抗噪性，但不同的自监督表示对性能的影响仍然未知。因此，在本文中，我们通过实验比较了四种类型的自监督表示（例如，WavLM、Wav2vec2.0、HuBERT、Data2vec）用于 TTS，使用基于 HiFi-GAN 的表示到波形声码器和基于 Fastspeech 的文本到表示声学模型。由于这些表示具有更好的抑制噪音和说话人线索的能力，我们进一步集成了说话人嵌入以进行语音转换。在 LJSpeech 和 LibriTTS 数据集上的实验结果证明了所提方法的有效性。一些音频样本可在以下网址获取：https://zxyzqs.github.io/。
+> With the advance in deep learning, text-to-speech (TTS) using clean
+ speech has witnessed significant performance improvements. As
+ the data collected in real scenes often contain noise and thus needs
+ to be denoised, TTS models trained on the enhanced speech suffer
+ from distortions and residual noises, which affect the quality of the
+ synthesized speech. Meanwhile, self-supervised pre-trained models
+ exhibit good noise robustness in many tasks, indicating that the
+ learned representation is more tolerant to noise perturbations. It
+ was shown that WavLM-based representations are noise-robust for
+ speech synthesis, but the impact of different self-supervised repre
+sentations on the performance remains unknown. In this paper, we
+ therefore experimentally compare four types of self-supervised rep
+resentations (e.g., WavLM, Wav2vec2.0, HuBERT, Data2vec) for
+ TTS using a HiFi-GAN-based representation-to-waveform vocoder
+ and a Fastspeech-based text-to-representation acoustic model. Since
+ the representations have a better capacity to suppress the noise and
+ speaker clues, we further integrate speaker embedding for voice
+ conversion. Experimental results on the LJSpeech and LibriTTS
+ datasets demonstrate the efficacy of the proposed method. Some au
+dio samples are available at: https://zxyzqs.github.io/.
+### MODEL
+#### The proposed TTS paradigm:
+![img.png](plot/TTS_paradigm.png)
+#### The structure of the voice conversion model.
+![img_1.png](plot/voice_conversion_model.png)
