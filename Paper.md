@@ -864,7 +864,7 @@ hancement (SE) front-end. With these improvements, our proposed
 #### Overview of SSL-based TTS model
 ![img.png](plot/SSL-basedTTS.png)
 #### Overview of adapters.
-![img_1.png](OverviewAdapters..png)
+![img_1.png](plot/OverviewAdapters..png)
 ___
 ## An Experimental Comparison of Noise-Robust Text-To-Speech Synthesis Systems Based On Self-Supervised Representation
 原文：https://ieeexplore.ieee.org/document/10446750An 
@@ -895,3 +895,36 @@ dio samples are available at: https://zxyzqs.github.io/.
 ![img.png](plot/TTS_paradigm.png)
 #### The structure of the voice conversion model.
 ![img_1.png](plot/voice_conversion_model.png)
+___
+##  Considering Temporal Connection between Turns for Conversational Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10448356
+### ABSTRACT
+对话语音合成旨在基于历史对话合成单个说话人的语音。然而，对话语音合成中的大多数研究仅关注当前说话人话轮的合成性能，而忽略了对话者话轮之间的时间关系。因此，我们在对话语音合成中考虑话轮之间的时间联系，这对于对话的自然性和连贯性至关重要。具体来说，本文制定了一个话轮之间没有重叠的任务，只考虑一个历史话轮。为了完成这项任务，提出了一个声学模型，该模型利用来自前一话轮的多模态（包括文本和语音）信息来预测当前话轮和话轮间间隙的声学特征。该模型基于 MQTTS 设计，在预测每帧的声学特征时结合了前一话轮的全局声学表示和基于 BERT 的局部语义表示。实验结果表明，通过引入全局声学信息和局部语义信息，我们的模型在转折之间的时间联系和合成语音质量方面取得了更好的表现。音频样本可以在https://mkd-mkd.github.io/icassp2024中找到。
+> Conversational speech synthesis aims to synthesize speech of an
+ individual speaker based on history conversation. However, most
+ studies in conversational speech synthesis only focus on the syn
+thesis performance of the current speaker’s turn and neglect the
+ temporal relationship between turns of interlocutors. Therefore, we
+ consider the temporal connection between turns for conversational
+ speech synthesis, which is crucial for the naturalness and coherence
+ of conversations. Specifically, this paper formulates a task in
+ which there is no overlap between turns and only one history
+ turn is considered. To complete this task, an acoustic model is
+ proposed which leverages multi-modal (including text and speech)
+ information from previous turn to predict the acoustic features of
+ not only current turn but also the inter-turn gap. The model is
+ designed based on MQTTS and incorporates the global acoustic
+ representation and BERT-based local semantic representation of
+ previous turn when predicting the acoustic features of each frame.
+ Experimental results demonstrate that with the introduction of global
+ acoustic information and local semantic information, our model
+ achieves better performance on the temporal connection between
+ turns and the quality of synthetic speech. Audio samples can be
+ found in https://mkd-mkd.github.io/icassp2024.
+### MODEL
+#### real-world spontaneous conversation
+![img.png](plot/Real-worldSpontaneousConversation.png)
+#### The conversational scenario in our task
+![img_1.png](plot/TheConversationalScenarioInOurTask.png)
+####  An overview of our proposed approach to acoustic modeling considering turn connections.
+![img_2.png](plot/AcousticModelingConsideringTurnConnections.png)
