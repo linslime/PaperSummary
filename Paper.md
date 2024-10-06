@@ -1007,3 +1007,29 @@ tal results show that LF significantly improves speaker similarity
 ![img.png](plot/ZS-TTS.png)
 #### Illustration of LF of (a) interpolation and (b) noise adding.
 ![img_1.png](plot/LF.png)
+___
+## Concss: Contrastive-based Context Comprehension for Dialogue-Appropriate Prosody in Conversational Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10446506
+### ABSTRACT
+对话语音合成 (CSS) 将历史对话作为补充信息，旨在生成具有对话适当韵律的语音。虽然以前的方法已经深入研究了增强上下文理解，但上下文表示仍然缺乏有效的表示能力和上下文敏感的可辨别性。在本文中，我们介绍了一个基于对比学习的 CSS 框架 CONCSS。在这个框架内，我们定义了一个特定于 CSS 的创新借口任务，使模型能够对未标记的对话数据集进行自监督学习，以增强模型的上下文理解。此外，我们引入了一种用于负样本增强的采样策略，以增强上下文向量的可辨别性。这是将对比学习集成到 CSS 中的首次尝试。我们对不同的对比学习策略进行了消融研究，并与之前的 CSS 系统进行了全面的实验。结果表明，我们提出的方法合成的语音表现出更符合上下文和更敏感的韵律。
+> Conversational speech synthesis (CSS) incorporates historical di
+alogue as supplementary information with the aim of generating
+ speech that has dialogue-appropriate prosody. While previous meth
+ods have already delved into enhancing context comprehension,
+ context representation still lacks effective representation capabilities
+ and context-sensitive discriminability. In this paper, we introduce a
+ contrastive learning-based CSS framework, CONCSS. Within this
+ framework, we define an innovative pretext task specific to CSS that
+ enables the model to perform self-supervised learning on unlabeled
+ conversational datasets to boost the model’s context understand
+ing. Additionally, we introduce a sampling strategy for negative
+ sample augmentation to enhance context vectors’ discriminabil
+ity. This is the first attempt to integrate contrastive learning into
+ CSS. We conduct ablation studies on different contrastive learning
+ strategies and comprehensive experiments in comparison with prior
+ CSS systems. Results demonstrate that the synthesized speech from
+ our proposed method exhibits more contextually appropriate and
+ sensitive prosody.
+### MODEL
+####  CON trastive-based Conversational Speech Synthesis
+![img.png](plot/CONCSS.png)
