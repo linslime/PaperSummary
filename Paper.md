@@ -956,3 +956,54 @@ siveness. Both objective test and subjective evaluation results
 ![img.png](plot/DurIAN-E.png)
 #### Blocks used in the encoders of DurIAN-E2
 ![img_1.png](plot/DurIAN-E2Encoder.png)
+___
+## Collaborative Watermarking for Adversarial Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10448134
+### ABSTRACT
+神经语音合成技术的进步为我们带来了不仅接近人类自然语音的技术，而且能够使用少量数据即时克隆语音，并且使用预先训练的模型高度可访问。自然而然，生成内容的潜在洪流提出了对合成语音检测和水印的需求。最近，合成语音检测方面的大量研究工作与自动说话人验证和欺骗对策挑战 (ASVspoof) 有关，该挑战侧重于被动对策。本文对生成语音检测持补充观点：合成系统应积极努力以一种有助于另一台机器检测的方式对生成的语音进行水印，但对人类听众保持透明。我们提出了一种合成语音水印的协作训练方案，并表明 HiFi-GAN 神经声码器与 ASVspoof 2021 基线对策模型协作可持续提高传统分类器训练的检测性能。此外，我们展示了如何将协作训练与增强策略相结合，以增强对噪声和时间拉伸的鲁棒性。最后，听力测试表明，协作训练对声码语音的感知质量几乎没有不利影响。
+> Advances in neural speech synthesis have brought us technology that
+ is not only close to human naturalness, but is also capable of instant
+ voice cloning with little data, and is highly accessible with pre-trained
+ models available. Naturally, the potential flood of generated content
+ raises the need for synthetic speech detection and watermarking. Re
+cently, considerable research effort in synthetic speech detection has
+ been related to the Automatic Speaker Verification and Spoofing
+ Countermeasure Challenge (ASVspoof), which focuses on passive
+ countermeasures. This paper takes a complementary view to gen
+erated speech detection: a synthesis system should make an active
+ effort to watermark the generated speech in a way that aids detection
+ by another machine, but remains transparent to a human listener. We
+ propose a collaborative training scheme for synthetic speech water
+marking and show that a HiFi-GAN neural vocoder collaborating
+ with the ASVspoof 2021 baseline countermeasure models consis
+tently improves detection performance over conventional classifier
+ training. Furthermore, we demonstrate how collaborative training can
+ be paired with augmentation strategies for added robustness against
+ noise and time-stretching. Finally, listening tests demonstrate that
+ collaborative training has little adverse effect on perceptual quality of
+ vocoded speech.
+### MODEL
+####  detector models
+![img.png](plot/DetectorModels.png)
+___
+## Latent Filling: Latent Space Data Augmentation for Zero-Shot Speech Synthesis
+原文：https://ieeexplore.ieee.org/document/10446098
+### ABSTRACT
+之前在零样本文本转语音 (ZS-TTS) 方面的研究尝试通过众包扩大训练数据或增强现有语音数据来增强其系统。然而，使用低质量数据导致整体系统性能下降。为了避免这种性能下降，我们提出了一种潜在填充 (LF) 方法，而不是直接增强输入数据，该方法在 ZS-TTS 系统的说话人嵌入空间中采用简单但有效的潜在空间数据增强。通过结合一致性损失，LF 可以无缝集成到现有的 ZS-TTS 系统中，而无需额外的训练阶段。实验结果表明，LF 显著提高了说话人相似度，同时保持了语音质量。
+> Previous works in zero-shot text-to-speech (ZS-TTS) have attempted
+ to enhance its systems by enlarging the training data through crowd
+sourcing or augmenting existing speech data. However, the use of
+ low-quality data has led to a decline in the overall system perfor
+mance. To avoid such degradation, instead of directly augmenting
+ the input data, we propose a latent filling (LF) method that adopts
+ simple but effective latent space data augmentation in the speaker
+ embedding space of the ZS-TTS system. By incorporating a con
+sistency loss, LF can be seamlessly integrated into existing ZS-TTS
+ systems without the need for additional training stages. Experimen
+tal results show that LF significantly improves speaker similarity
+ while preserving speech quality.
+### MODEL
+#### ZS-TTS
+![img.png](plot/ZS-TTS.png)
+#### Illustration of LF of (a) interpolation and (b) noise adding.
+![img_1.png](plot/LF.png)
