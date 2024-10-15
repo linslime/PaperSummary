@@ -135,6 +135,8 @@ ___
 原文：https://arxiv.org/abs/2403.16973  
 翻译：https://blog.csdn.net/matt45m/article/details/140153776  
 代码：https://github.com/jasonppy/voicecraft  
+### ABSTRACT
+我们引入了 VOICECRAFT，这是一种标记填充神经编解码器语言模型，它在有声读物、互联网视频和播客 1 上的语音编辑和零样本文本转语音 (TTS) 方面均实现了最先进的性能。VOICECRAFT 采用 Transformer 解码器架构，并引入了一种标记重排程序，该程序结合了因果掩蔽和延迟堆叠，以便在现有序列内生成。在语音编辑任务中，VOICECRAFT 生成的编辑语音在自然度方面几乎与未编辑的录音没有区别，这是人类评估的；对于零样本 TTS，我们的模型优于之前的 SotA 模型，包括 VALL E 和流行的商业模型 XTTS v2。至关重要的是，这些模型是在具有挑战性和现实的数据集上进行评估的，这些数据集由不同的口音、说话风格、录音条件以及背景噪音和音乐组成，与其他模型和真实录音相比，我们的模型表现始终良好。特别是，对于语音编辑评估，我们引入了一个高质量、具有挑战性和现实的数据集，名为 REALEDIT。我们鼓励读者在 https://jasonppy.github.io/VoiceCraft_web 上收听演示。
 ### VoiceCraft
 #### VoiceCraft模型结构
 ![img.png](plot/VoiceCraft.png)
@@ -155,6 +157,9 @@ ___
 ___
 ## MSMC-TTS: Multi-Stage Multi-Codebook VQ-VAE Based Neural TTS
 原文：https://ieeexplore.ieee.org/abstract/document/10114504
+### ABSTRACT
+摘要 — 本文旨在通过矢量量化、紧凑的语音表示来改进神经 TTS。我们提出了一种基于矢量量化变分自动编码器 (VQ-VAE) 的特征分析器，将声学特征编码为具有不同时间分辨率的序列，并使用多个 VQ 码本对其进行量化，以形成多阶段多码本表示 (MSMCR)。TTS 系统 MSMC-TTS 旨在通过这种表示来预测更好的语音。在预测中，通过最小化欧几里得距离和“三重态损失”，训练多阶段预测器分阶段将输入文本序列映射到 MSMCR。在合成中，神经声码器将地面实况或预测的 MSM CR 转换为语音波形。所提出的系统使用单说话人 TTS 数据集进行训练，并在各种场景中进行测试以进行全面评估。在 TTS 评估中，MSMC-TTS 在英语和中文数据集上获得了 4.34 和 4.10 的 MOS，明显优于 VITS（得分 3.78 和 3.90）。同时，与梅尔谱图相比，在域分类错误率 (DER) 较高的 MSMCR 中，预测与地面实况之间的域差异较低。此外，该系统显示出较低的建模复杂度和数据大小要求，即使使用较少的模型参数或训练数据也能保持出色的性能。来自多个代码本和阶段的分析-合成和 TTS 的显着改进也证明它们是寻求更有利可图的语音表示和构建高性能神经 TTS 的重要组成部分。
+索引词——多阶段多码本 (MSMC)、语音表示、VQ-VAE、神经 TTS、语音合成。
 ### MSMC-TTS
 #### Framework of the neural TTS system
 ![img.png](plot/FrameworkOfTheNeuralTTSSystem.png)
@@ -172,6 +177,8 @@ ___
 ## StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models
 原文：https://proceedings.neurips.cc/paper_files/paper/2023/hash/3eaad2a0b62b5ed7a2e66c2188bb1449-Abstract-Conference.html  
 译文：https://zhuanlan.zhihu.com/p/681000850
+### ABSTRACT
+在本文中，我们介绍了 StyleTTS 2，这是一种文本转语音 (TTS) 模型，它利用风格扩散和对抗性训练以及大型语音语言模型 (SLM) 来实现人类级别的 TTS 合成。StyleTTS 2 与其前身的不同之处在于，它通过扩散模型将风格建模为潜在随机变量，从而生成最适合文本的风格，而无需参考语音，从而实现高效的潜在扩散，同时受益于扩散模型提供的多样化语音合成。此外，我们使用大型预训练的 SLM（例如 WavLM）作为鉴别器，并使用我们新颖的可微分持续时间建模进行端到端训练，从而提高语音自然度。StyleTTS 2 在单说话人 LJSpeech 数据集上超越了人类录音，并在多说话人 VCTK 数据集上与其匹敌，这由英语母语人士评判。此外，在 LibriTTS 数据集上训练时，我们的模型在零样本说话人自适应方面优于以前公开的模型。这项工作在单人和多人数据集上实现了第一个人类级别的 TTS，展示了使用大型 SLM 进行风格传播和对抗训练的潜力。音频演示和源代码可在 https://styletts2.github.io/ 上找到。
 ### StyleTTS 2
 #### Acoustic modules pre-training and joint training.
 ![img.png](plot/AcousticModules.png)
@@ -180,6 +187,8 @@ ___
 ___
 ## P-Flow: A Fast and Data-Efficient Zero-Shot TTS through Speech Prompting
 原文：https://proceedings.neurips.cc/paper_files/paper/2023/hash/eb0965da1d2cb3fbbbb8dbbad5fa0bfc-Abstract-Conference.html
+### ABSTRACI
+虽然最近的大规模神经编解码器语言模型通过对数千小时的数据进行训练，在零样本 TTS 方面表现出了显著的改进，但它们也存在一些缺点，例如缺乏鲁棒性、与之前的自回归 TTS 方法类似的采样速度慢，以及依赖于预训练的神经编解码器表示。我们的工作提出了 P-Flow，这是一种快速且数据高效的零样本 TTS 模型，它使用语音提示进行说话人自适应。P-Flow 包括用于说话人自适应的语音提示文本编码器和用于高质量和快速语音合成的流匹配生成解码器。我们的语音提示文本编码器使用语音提示和文本输入来生成说话人条件文本表示。流匹配生成解码器使用说话人条件输出来合成高质量的个性化语音，速度明显快于实时。与神经编解码器语言模型不同，我们使用连续梅尔表示在 LibriTTS 数据集上专门训练 P-Flow。通过我们使用连续语音提示的训练方法，P-Flow 的说话人相似度性能与大规模零样本 TTS 模型相当，但训练数据量少了两个数量级，采样速度提高了 20 倍以上。我们的结果表明，P-Flow 的发音更佳，在人像和说话人相似度方面优于其最近的先进同类产品，因此 P-Flow 是一种有吸引力且理想的替代方案。我们在演示页面上提供了音频样本。
 ### P-Flow
 #### The overall diagram of P-Flow.
 ![img.png](plot/P-Flow.png)
