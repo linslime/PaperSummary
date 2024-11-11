@@ -199,28 +199,7 @@ ___
 原文：https://ieeexplore.ieee.org/document/10447190  
 ### ABSTRACT
 说话人识别 (SI) 系统已广泛应用于实际应用中。然而，最近的研究表明，即使不向攻击者提供反馈，SI 系统也容易受到两种普遍存在的攻击：基于转移的对抗攻击和语音合成欺骗攻击。基于转移的对抗攻击面临着收集特定内容和音色的自然语音的挑战。相比之下，语音合成欺骗攻击可以合成任何内容和音色的语音，但可以被音频深度伪造检测器 (ADD) 检测到。在本文中，我们提出了一种称为对抗性文本到语音合成 (AdvTTS) 的新方法来攻击 SI 系统。AdvTTS 结合了基于转移的对抗攻击和语音合成欺骗攻击的优势，通过使用本地代理模型合成可转移的攻击语音。 AdvTTS 是首个能够对任意语音内容和音色进行对抗和欺骗攻击的攻击方法。AdvTTS 能够以高质量语音欺骗 SI 系统，同时逃避 ADD 检测。实验表明，AdvTTS 在欺骗攻击方面的表现优于其他基线，并且在与投影梯度下降 (PGD) 相结合的对抗攻击方面的表现优于基线。
->Speaker identification (SI) systems have been widely em
-ployed in real-world applications. However, recent research
- has demonstrated that SI systems are vulnerable to two preva
-lent attacks even without providing feedback to the attacker:
- the transfer-based adversarial attack and the speech synthe
-sis spoofing attack. The transfer-based adversarial attack
- faces the challenges of collecting natural speech for specific
- content and timbre. In contrast, the speech synthesis spoof
-ing attack can synthesize speech for any content and timbre
- but can be detected by audio deepfake detectors (ADD). In
- this paper, we propose a novel method, called adversarial
- text-to-speech synthesis (AdvTTS), for attacking SI systems.
- AdvTTS combines the strengths of transfer-based adversarial
- attacks and speech synthesis spoofing attacks, by synthesiz
-ing transferable attack speech with local surrogate models.
- AdvTTS is the first attack method that can conduct both ad
-versarial and spoofing attacks with any speech content and
- timbre. AdvTTS can deceive SI systems with high-quality
- speech while evading ADD detection. Experiments show that
- AdvTTS can outperform other baselines for spoofing attacks,
- and can outperform the baselines for adversarial attacks with
- the combination of projected gradient descent (PGD).
+>Speaker identification (SI) systems have been widely employed in real-world applications. However, recent research has demonstrated that SI systems are vulnerable to two prevalent attacks even without providing feedback to the attacker: the transfer-based adversarial attack and the speech synthesis spoofing attack. The transfer-based adversarial attack faces the challenges of collecting natural speech for specific content and timbre. In contrast, the speech synthesis spoofing attack can synthesize speech for any content and timbre but can be detected by audio deepfake detectors (ADD). In this paper, we propose a novel method, called adversarial text-to-speech synthesis (AdvTTS), for attacking SI systems. AdvTTS combines the strengths of transfer-based adversarial attacks and speech synthesis spoofing attacks, by synthesizing transferable attack speech with local surrogate models. AdvTTS is the first attack method that can conduct both adversarial and spoofing attacks with any speech content and timbre. AdvTTS can deceive SI systems with high-quality speech while evading ADD detection. Experiments show that AdvTTS can outperform other baselines for spoofing attacks, and can outperform the baselines for adversarial attacks with the combination of projected gradient descent (PGD).
 ### AdvTTS
 #### The architecture of AdvTTS
 ![img.png](plot/AdvTTS.png)
@@ -487,6 +466,7 @@ ___
 端到端 (E2E) 序列到序列 (S2S) 神经文本到语音 (TTS) 模型和 E2E-S2S 神经语音转换 (VC) 模型可以通过单个神经网络实现高质量的语音合成。为了进一步提高 E2E-S2S TTS 和 VC 模型的合成质量并提高其推理速度，我们提出了一种基于无 Transformer ConvNeXt 的编码器和解码器。此外，为了进一步提高推理速度，我们提出了 ConvNeXt-TTS 和 ConvNeXt-VC，其中包括 WaveNeXt 神经声码器。这也是由 ConvNeXt 块构建的，并且可以实现比 HiFi-GAN 更快的合成速度。使用 Hi-Fi-CAPTAIN 语料库对 E2E-S2S
 TTS 和 E2E-S2S-VC 条件进行的实验结果表明，所提出的基于 ConvNeXt 的编码器和解码器的推理速度比基于 Transformer 的编码器和解码器快三倍，同时提高了合成质量。特别是，ConvNeXt-TTS 和 ConvNeXt-VC 可以在单核 CPU 上实现非常快速的 E2E-S2S-TTS 和 E2E-S2S
 VC，实时系数为 0.05。
+
 >End-to-end (E2E) sequence-to-sequence (S2S) neural text-to-speech
  (TTS) models and E2E-S2S neural voice conversion (VC) mod
 els can achieve high-quality speech synthesis with a single neural
@@ -567,23 +547,10 @@ ___
 原文：https://ieeexplore.ieee.org/document/10446852
 ### ABSTRACT
 本文提出了一种多情感、多语言和多说话人的文本转语音 (MELS-TTS) 系统，采用解开的风格标记来实现有效的情感传递。在包含各种属性（例如情绪状态、说话者身份和语言风格）的语音中，解开这些元素对于高效的多情感、多语言和多说话人的 TTS 系统至关重要。为了实现这一目的，我们建议利用单独的风格标记来解开情感、语言、说话者和残留信息，这受到全局风格标记 (GST) 的启发。通过注意机制，每个风格标记从目标语音中学习其各自的语音属性。我们提出的方法在客观和主观评价中都提高了性能，展示了能够生成具有多种情感的跨语言语音的能力，即使是来自中性的源说话者，同时保留说话者的身份。
-> This paper proposes a multi-emotion, multi-lingual, and multi
-speaker text-to-speech (MELS-TTS) system, employing disentan
-gled style tokens for effective emotion transfer. In speech encom
-passing various attributes, such as emotional state, speaker identity,
- and linguistic style, disentangling these elements is crucial for an
- efficient multi-emotion, multi-lingual, and multi-speaker TTS sys
-tem. To accomplish this purpose, we propose to utilize separate style
- tokens to disentangle emotion, language, speaker, and residual in
-formation, inspired by the global style tokens (GSTs). Through the
- attention mechanism, each style token learns its respective speech
- attribute from the target speech. Our proposed approach yields im
-proved performance in both objective and subjective evaluations,
- demonstrating the ability to generate cross-lingual speech with di
-verse emotions, even from a neutral source speaker, while preserving
- the speaker’s identity.
-###  MELS-TTS
-![img.png](plot/MELS-TTS.png)
+> This paper proposes a multi-emotion, multi-lingual, and multi speaker text-to-speech (MELS-TTS) system, employing disentangled style tokens for effective emotion transfer. In speech encompassing various attributes, such as emotional state, speaker identity, and linguistic style, disentangling these elements is crucial for an efficient multi-emotion, multi-lingual, and multi-speaker TTS system. To accomplish this purpose, we propose to utilize separate style tokens to disentangle emotion, language, speaker, and residual information, inspired by the global style tokens (GSTs). Through the attention mechanism, each style token learns its respective speech attribute from the target speech. Our proposed approach yields improved performance in both objective and subjective evaluations, demonstrating the ability to generate cross-lingual speech with diverse emotions, even from a neutral source speaker, while preserving the speaker’s identity.
+>
+> ###  MELS-TTS
+> ![img.png](plot/MELS-TTS.png)
 ___
 ## Fastmandarin: Efficient Local Modeling for Natural Mandarin Speech Synthesis
 原文：https://ieeexplore.ieee.org/document/10446112
@@ -778,6 +745,7 @@ ___
 ### ABSTRACT
 有声读物的合成语音的表现力受到训练数据中广义的模型架构和不均衡的风格分布的限制。为了解决这些问题，本文提出了一种基于 VQ VAE 预训练的自监督风格增强方法，用于富有表现力的有声读物语音合成。
 首先，使用大量未标记的纯文本数据对文本风格编码器进行预训练。其次，以自监督的方式对基于 VQ-VAE 的频谱图风格提取器进行预训练，使用大量涵盖复杂风格变化的音频数据。然后在风格提取器的指导下，专门设计了一种具有两个编码器-解码器路径的新型架构，分别对发音和高级风格表现力进行建模。客观和主观评价均表明，我们提出的方法可以有效提高有声读物合成中合成语音的自然度和表现力，特别是对于角色和域外场景。
+
 > The expressive quality of synthesized speech for audiobooks is lim
 ited by generalized model architecture and unbalanced style dis
 tribution in the training data. To address these issues, in this pa
