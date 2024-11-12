@@ -1,43 +1,7 @@
-we model styles as a latent random variable to generate
-the most suitable style for the text without requiring reference speech, achieving
-efficient latent diffusion.
+## ABSTRACT
+It remains a challenge to effectively control the emotion rendering in text-to-speech (TTS) synthesis. Prior studies have primarily utilized an utterance-level style embedding extracted from reference audio, neglecting the inherent multi-periodic property of speech prosody. This paper introduces a novel non-autoregressive framework that model styles as a latent random variable to generate the most suitable style for the text without requiring reference speech, achieving efficient latent diffusion. Firstly,  We propose a multi-periodic style feature extractor to captures the latent features of different periodic signals in audio. Secondly,  a novel architecture with the multi-stage style decoder is specially designed to model the pronunciation and high-level style expressiveness respectively。Our proposed approach yields improved performance in both objective and subjective evaluations, demonstrating the ability to generate cross-lingual speech.
+## INTRODUCTION
 
-. We introduce ED-TTS, a multi-scale emo
-tional speech synthesis model that leverages Speech Emotion
- Diarization (SED) and Speech Emotion Recognition (SER) to
- model emotions at different levels.
+ Recent advancements in speech synthesis systems [1, 2, 3, 4] have enabled the generation of high-quality speech. However, in some complex scenarios, such as human-computer interaction (HCI), these systems still fall short since they are unable to generate audio with natural and human-like prosody.
 
- Our proposed approach yields im
-proved performance in both objective and subjective evaluations,
- demonstrating the ability to generate cross-lingual speech with di
-verse emotions, even from a neutral source speaker, while preserving
- the speaker’s identity.
-
-Attention-based speech synthesis methods often suffer from
- dispersed attention across the entire input sequence, resulting
- in poor local modeling and unnatural Mandarin synthesized
- speech. To address these issues, we present FastMandarin, a
- rapid and natural Mandarin speech synthesis framework that
- employs two explicit methods to enhance local modeling and
- improve pronunciation representation.
-
-It remains a challenge to effectively control the emotion rendering
- in text-to-speech (TTS) synthesis. Prior studies have primarily fo
-cused on learning a global prosodic representation at the utterance
- level, which strongly correlates with linguistic prosody. Our goal
- is to construct a hierarchical emotion distribution (ED) that effec
-tively encapsulates intensity variations of emotions at various levels
- of granularity, encompassing phonemes, words, and utterances. Dur
-ing TTS training, the hierarchical ED is extracted from the ground
-truth audio and guides the predictor to establish a connection be
-tween emotional and linguistic prosody. 
-
-The expressive quality of synthesized speech for audiobooks is lim
-ited by generalized model architecture and unbalanced style dis
-tribution in the training data. 
-
-The expressive quality of synthesized speech for audiobooks is lim
-ited by generalized model architecture and unbalanced style dis
-tribution in the training data.
-
-It remains a challenge to effectively control the emotion rendering in text-to-speech (TTS) synthesis. Prior studies have primarily focused on learning a global prosodic representation at the utterance level, which strongly correlates with linguistic prosody. This paper introduces a novel non-autoregressive framework that model styles as a latent random variable to generate the most suitable style for the text without requiring reference speech, achieving efficient latent diffusion. Firstly,  We propose a multi-periodic style feature extractor to captures the latent features of different periodic signals in audio. Secondly,  a novel architecture with the multi-periodic style extractor is specially designed to model the pronunciation and high-level style expressiveness respectively。Our proposed approach yields improved performance in both objective and subjective evaluations, demonstrating the ability to generate cross-lingual speech.
+ At present, there are two mainstream approaches to model the speaking style information: one uses pre-defined categorical style labels as the global control condition of TTS systems to denote different speaking styles [1] and the other imitates the speaking style given a reference speech [2, 3]. For the first kind of approach, the style control strategy is more in tuitive and interpretable, which is more suitable for practical TTS applications. For the second one, the global style tokens or style embeddings extracted from the training datasets can enrich the diversity of expressiveness and additional style la bels are not required.
