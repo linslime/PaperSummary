@@ -2,3 +2,4 @@
 There is a huge development in the field of speech synthesis that is not only close to human naturalness, but is also capable of instant voice cloning with little data, and is highly accessible with pre-trained models available. Naturally, the potential flood of generated content raises the need for synthetic speech detection and watermarking. We propose a collaborative training scheme that embeds specific watermarks into speech synthesized by different users and enables the detection of these watermarks , but remains transparent to a human listener. Specifically, we employs a straightforward and effective GAN based on HiFi-GAN to restruct audio and embed watermarks, then trains a model to detect the type of watermark in the audio. Finally, listening tests demonstrate that collaborative training has little adverse effect on perceptual quality of vocoded speech. 
 
 ## INTRODUCTION
+
