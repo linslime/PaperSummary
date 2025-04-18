@@ -164,3 +164,6 @@
 	* deepseek r1
 	* deepseek v3
 	* chatgpt-4o
+
+## hypergraph
+* **业务背景** 先进行 query 重写， 构建 prompt 生成 sql 语句
