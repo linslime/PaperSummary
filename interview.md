@@ -1,14 +1,13 @@
 ## LLM 基础
 ### transformer 基础知识
 1. LN 和 BN 区别？
-2. RMS Norm 公式
 3. 多头注意力机制公式和代码
 4. 多购注意力机制为什么除以根号 d
 5. qkv 矩阵的计算
 6. ResNet 的作用？
 7. RMS Norm 比 LayerNorm 好在哪里？
-8. SwiGLU 激活函数公式？SwiGLU 比 ReLU 好在哪里？
-9. RoPE 旋转式位置编码公式？好在哪里？
+8. SwiGLU 比 ReLU 好在哪里？
+9. RoPE 旋转式位置好在哪里？
 10. Causal Mask 机制介绍
 11. 注意力机制的变体，比如MHA、MQA、GQA、MLA
 12. Post-LN、Pre-LN区别
@@ -37,7 +36,7 @@
 35. ReLU为什么可以缓解梯度消失问题？
 36. 交叉熵数学公式
 
-### Post-Training
+### Training
 1. LoRA 初始化怎么做？用的lora_rank是多少？为什么不用其他的数？
 2. 为什么用 LoRA？
 3. LoRA、DPO 和 RL 在数学上的区别
@@ -72,6 +71,19 @@
 32. 大模型数据合成有哪些方法
 33. SFT 的 loss 如何设置？
 34. 如何优化大模型训练速度
+
+### 公式
+1. DPO 公式
+2. softmax 公式
+3. 多头注意力机制公式
+4. SwiGLU 激活函数公式
+5. RMS Norm 公式
+6. Layer Norm 公式
+7. Batch Norm 公式
+8. RoPE 旋转式位置编码公式
+9. 交叉熵数学公式
+10. BLEU 和 ROUGH 的计算公式
+11. PPO 公式
 
 ### 模型评测
 1. 如何看大模型好坏？评估指标有哪些
