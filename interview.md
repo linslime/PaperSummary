@@ -71,6 +71,7 @@
 32. 大模型数据合成有哪些方法
 33. SFT 的 loss 如何设置？
 34. 如何优化大模型训练速度
+35. LoRA 的超参数 target_modules，lora_rank，lora_alpha 如何调优？含义是什么？可以选的值是什么？
 
 ### 公式
 1. DPO 公式
@@ -104,3 +105,13 @@
 10. data_loader
 11. trainer
 12. 交叉熵代码
+
+### 面试问题
+#### 2025.04.24
+1. Qwen2.5-72B-Instruct 多轮后，历史对话理解会变差，如何优化？
+2. 对于 Agent 的微调和评测，涉及多个模型
+3. 基于 374 条数据，用 ChatGPT-4o 生成数据，数据同质化如何处理？
+4. action 的调用如何校验? 比如删除数据之类的。
+5. 用 Swift 架构，对 ChatGLM3-6B 模型进行 LoRA 和 DPO，关注过训练时长和显存的情况吗？ 
+6. 做的工作都偏工程化
+7. 评测的时候，用 chunk 去生成 query 和 answer，如果一个 query 的 answer 包含在多个chunk 里，怎么办？
