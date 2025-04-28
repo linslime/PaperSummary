@@ -1,5 +1,5 @@
-## LLM 基础
-### transformer 基础知识
+# LLM 基础
+## transformer 基础知识
 1. LN 和 BN 区别？
 3. 多头注意力机制公式和代码
 4. 多购注意力机制为什么除以根号 d
@@ -12,7 +12,7 @@
 11. 注意力机制的变体，比如MHA、MQA、GQA、MLA
 12. Post-LN、Pre-LN区别
 13. Causal-LM、Prefix-LM区别
-14. Decoder-only，Encoder-only 和 Encoder-Decoder的区别是什么？为什么大部分是 Decoder-only?
+14. Decoder-only，Encoder-only 和 Encoder-Decoder 的区别是什么？为什么大部分是 Decoder-only?
 15. 主流大模型的架构、训练任务、训练 trick
 16. 为什么使用MHA?为什么用点乘？
 17. 流行的模型对于 embedding 有什么改进？
@@ -36,7 +36,7 @@
 35. ReLU为什么可以缓解梯度消失问题？
 36. 交叉熵数学公式
 
-### Training
+## Training
 1. LoRA 初始化怎么做？用的lora_rank是多少？为什么不用其他的数？
 2. 为什么用 LoRA？
 3. LoRA、DPO 和 RL 在数学上的区别
@@ -73,7 +73,7 @@
 34. 如何优化大模型训练速度
 35. LoRA 的超参数 target_modules，lora_rank，lora_alpha 如何调优？含义是什么？可以选的值是什么？
 
-### 公式
+## 公式
 1. DPO 公式
 2. softmax 公式
 3. 多头注意力机制公式
@@ -86,13 +86,13 @@
 10. BLEU 和 ROUGH 的计算公式
 11. PPO 公式
 
-### 模型评测
+## 模型评测
 1. 如何看大模型好坏？评估指标有哪些
 2. BLEU 和 ROUGH 的计算公式
 3. 数据集如何构建、评测？数据集评测过程中遇到哪些困难？如何解决？
 4. RAG 如何评价
 
-### 模型代码题
+## 模型代码题
 1. MHA
 2. LayerNorm
 3. Transformer Encoder(MHA + LayerNorm + FFN)
@@ -106,8 +106,8 @@
 11. trainer
 12. 交叉熵代码
 
-### 面试问题
-#### 2025.04.24
+## 面试问题
+### 2025.04.24
 1. Qwen2.5-72B-Instruct 多轮后，历史对话理解会变差，如何优化？
 2. 对于 Agent 的微调和评测，涉及多个模型
 3. 基于 374 条数据，用 ChatGPT-4o 生成数据，数据同质化如何处理？
@@ -115,3 +115,4 @@
 5. 用 Swift 架构，对 ChatGLM3-6B 模型进行 LoRA 和 DPO，关注过训练时长和显存的情况吗？ 
 6. 做的工作都偏工程化
 7. 评测的时候，用 chunk 去生成 query 和 answer，如果一个 query 的 answer 包含在多个chunk 里，怎么办？
+8. LSTM 和 transformer 对比
