@@ -1,17 +1,3 @@
-## memory 管理
-* **业务背景**：对 LLM 进行长对话记忆管理
-* **新增记忆**：主要分为以下步骤
-	1. **处理新记忆**：得到新的一轮对话，通过 LLM 分析 content 得到这段文本的 keywords、context、tags，得到新记忆。
-	2. **检索旧记忆**：通过新记忆的 content，使用 Faiss 和 Elasticsearch 对现存记忆进行稠密检索和语义检索；
-	3. **演化记忆**：由 LLM 判断新旧记忆的演化。
-		* **新记忆演化**：为新记忆选择 link 记忆，更新 tags
-		* **旧记忆演化**：更新 link 记忆的 context、tags
-	4. **添加新记忆**：将新记忆的 content 向量化，创建索引，并存入 Faiss。
-* **删除记忆**：通过 memory_id，从 Faiss 中删除对应的memory
-* **更新记忆**：通过 memory id，先删除旧记忆，再新增记忆。
-* **查询记忆**：通过 query 对各个记忆进行稀疏检索和稠密检索。
-## function call
-
 ## query 改写
 * **业务背景**：在多轮对话系统中，用户提问常常存在指代不清、上下文依赖强、信息不完整等问题，给下游意图识别和信息检索带来挑战。为提升大语言模型在复杂语境下的理解能力，我设计并实现了一套基于 Prompt 工程的 Query 改写模块，用于对用户提问进行上下文感知的优化重构。
 * **方法**：我分几个步骤来设计这个 prompt
@@ -181,3 +167,23 @@
 
 ## hypergraph
 * **业务背景** 先进行 query 重写， 构建 prompt 生成 sql 语句
+
+## memory 管理
+* **业务背景**：对 LLM 进行长对话记忆管理
+* **新增记忆**：主要分为以下步骤
+	1. **处理新记忆**：得到新的一轮对话，通过 LLM 分析 content 得到这段文本的 keywords、context、tags，得到新记忆。
+	2. **检索旧记忆**：通过新记忆的 content，使用 Faiss 和 Elasticsearch 对现存记忆进行稠密检索和语义检索；
+	3. **演化记忆**：由 LLM 判断新旧记忆的演化。
+		* **新记忆演化**：为新记忆选择 link 记忆，更新 tags
+		* **旧记忆演化**：更新 link 记忆的 context、tags
+	4. **添加新记忆**：将新记忆的 content 向量化，创建索引，并存入 Faiss。
+* **删除记忆**：通过 memory_id，从 Faiss 中删除对应的memory
+* **更新记忆**：通过 memory id，先删除旧记忆，再新增记忆。
+* **查询记忆**：通过 query 对各个记忆进行稀疏检索和稠密检索。
+## function call
+
+## MiniMind
+* **URL：** https://github.com/jingyaogong/minimind.git
+* **Pretrain：**
+	* **损失函数：**
+	* **优化器：** AdamW
