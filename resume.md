@@ -168,7 +168,9 @@
 ## hypergraph
 * **业务背景** 先进行 query 重写， 构建 prompt 生成 sql 语句
 
-## memory 管理
+## A-MEM: Agentic Memory for LLM Agents
+* **论文：**A-MEM: Agentic Memory for LLM Agents
+* **github：**https://github.com/agiresearch/A-mem.git
 * **业务背景**：对 LLM 进行长对话记忆管理
 * **新增记忆**：主要分为以下步骤
 	1. **处理新记忆**：得到新的一轮对话，通过 LLM 分析 content 得到这段文本的 keywords、context、tags，得到新记忆。
@@ -183,7 +185,57 @@
 ## function call
 
 ## MiniMind
-* **URL：** https://github.com/jingyaogong/minimind.git
+* **github：** https://github.com/jingyaogong/minimind.git
 * **Pretrain：**
-	* **损失函数：**
-	* **优化器：** AdamW
+	| 超参数 | 值 |
+	| :- | :- |
+	| 优化器 | AdamW |
+	| epochs | 2-6 |
+	| batch_size | 32 |
+	| learning_rate |5e-4 |
+	| accumulation_steps | 8 |
+	|loss | CrossEntropyLoss |
+	
+* **SFT：**
+	| 超参数 | 值 |
+	| :- | :- |
+	| 优化器 | AdamW |
+	| epochs | 2 |
+	| batch_size | 16 |LoRA
+	| learning_rate |5e-6 -> 5e-7 |
+	| accumulation_steps | 1 |
+	|loss | CrossEntropyLoss |
+	
+* **LoRA：**
+	| 超参数 | 值 |
+	| :- | :- |
+	| optimizer | AdamW |
+	| epochs | 10 |
+	| batch_size | 32 |
+	| learning_rate |1e-4 |
+	| accumulation_steps | 1 |
+	|loss | CrossEntropyLoss |
+	| rank | 8 |
+	
+* **DPO：**
+	| 超参数 | 值 |
+	| :- | :- |
+	| optimizer | AdamW |
+	| epochs | 2 |
+	| batch_size | 4 |
+	| learning_rate |1e-8 |
+	| accumulation_steps | 1 |
+	|loss | CrossEntropyLoss |
+
+* **DPO：**
+	| 超参数 | 值 |
+	| :- | :- |
+	| optimizer | AdamW |
+	| epochs | 2 |
+	| batch_size | 4 |
+	| learning_rate |1e-8 |
+	| accumulation_steps | 1 |
+	
+## Memories for Virtual AI Characters
+* **论文：**Memories for Virtual AI Characters
+* 
