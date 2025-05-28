@@ -170,6 +170,7 @@
 
 ## A-MEM: Agentic Memory for LLM Agents
 * **论文：**A-MEM: Agentic Memory for LLM Agents
+* **链接：**https://arxiv.org/abs/2502.12110v7
 * **github：**https://github.com/agiresearch/A-mem.git
 * **业务背景**：对 LLM 进行长对话记忆管理
 * **新增记忆**：主要分为以下步骤
@@ -182,6 +183,33 @@
 * **删除记忆**：通过 memory_id，从 Faiss 中删除对应的memory
 * **更新记忆**：通过 memory id，先删除旧记忆，再新增记忆。
 * **查询记忆**：通过 query 对各个记忆进行稀疏检索和稠密检索。
+* **实验**：
+	* **数据集**：LoCoMo dataset https://aclanthology.org/2024.acl-long.747/ DialSim dataset
+	* **模型**：
+		* Llama 3.2 3b
+		* Llama 3.2 1b
+		* Qwen2.5 3b
+		* Qwen2.5 1.5b
+		* GPT 4o
+		* GPT-4o-mini
+	* **baseline**
+		* LOCOMO
+		* READAGENT
+		* MEMORYBANK
+		* MEMGPT
+	* **指标**：
+		* F1
+		* BLEU
+		* ROUGE
+		* METEOR
+		* SBERT Similarity
+	* **对比角度**：
+		* Performance Analysis
+		* Cost-Efficiency Analysis：分析时间复杂度
+	* **消融实验**：评估 Link Generation (LG) and Memory Evolution (ME) 两个模块的有效性
+	* **超参数分析**：探索检索记忆时，top k对效果的影响。虽然增加 k 值通常会提升性能，但这种提升会逐渐趋于平稳，有时甚至会在更高 k 值时略有下降
+	* 分析空间复杂度
+	* 记忆可视化
 ## function call
 
 ## MiniMind
@@ -238,6 +266,7 @@
 	
 ## Memories for Virtual AI Characters
 * **论文：**Memories for Virtual AI Characters
+* **链接：**https://aclanthology.org/2023.inlg-main.17/
 * **问题：**提出了一个增强虚拟AI角色长期记忆的系统，使其能够记住关于自身、世界和过往经历的事实。
 * **方法：**
 	* **主要思路：**通过向通用的 LLM 发出基于聊天上下文和相关记忆动态创建的提示，来生成角色响应。
@@ -249,7 +278,15 @@
 	*  **Memory Creation Pipeline：**对记忆进行分块，然后总结出一个个的事实，并保证每一个都是可以被理解的
 	*  **Memory Structure：**每个记忆包含fact、embedding 和 meta information
 	*  **Forgetting Model：**对长时间不访问的记忆进行遗忘，指数遗忘
-* **评估：**
+* **实验：**
+	* **评估角度**：
+		* query 和 检索到的记忆的契合度
+		* LLM 在准确引用所用记忆方面的有效性
+	* **评估方法**：
+		1. 首先，从角色的回应中提取未经验证的主张。用GPT-4讲回复分解为独立的句子。
+		2. 用 GPT-4 评价句子的好坏
+		3. 人工核验
+	* **评估结果**：从检索的契合度和引用的准确性分析
 
 ## 天工 Agent 逆向
 * **官网：**https://www.tiangong.cn/
@@ -275,3 +312,38 @@
 	* **实现：**未知
 	* **思考：**不知道怎么实现最终报告的生成；如果子任务结果篇幅短，可不可以将全文一起送入 LLM?如果子任务结果的篇幅很长，又要以什么策略调度 LLM 呢？
 * **最终思考：**整理流程有一个了解，但是对于细节缺少认识；之后调研一下开源的论文或者 github，熟悉相关技术
+
+## Think-in-Memory: Recalling and Post-thinking Enable LLMs with Long-Term Memory
+* **论文：**Think-in-Memory: Recalling and Post-thinking Enable LLMs with Long-Term Memory
+* **链接：**https://arxiv.org/abs/2311.08719
+* **问题：**提出一个长对话记忆管理系统，不直接存储对话，要经过思考，也就是经过 LLM 处理成拥有完整的信息；
+* **方法：**
+	* **回忆和生成：**从记忆中检索相关想法，送入大模型生成答案
+	* **思考和更新：**模型生成回复后，调用 LLM 进行思考，插入、移除、融合记忆。
+	* **PEFT：**对模型进行高效参数微调
+* **关键组成部分：**
+	* **”思考“：**将原本的记忆重新梳理成原子知识
+	* **检索方式：**LSH
+
+## THEANINE: Revisiting Memory Management in Long-term Conversations with Timeline-augmented Response Generation
+* **论文：**THEANINE: Revisiting Memory Management in Long-term Conversations with Timeline-augmented Response Generation
+* **链接：**https://arxiv.org/abs/2406.10996v1
+* **问题：**通过构建相关历史事件和因果关系的记忆时间线，增强 LLM 响应生成。
+* **方法：**
+	* **构建记忆网络：**
+		* 识别联想记忆，为记忆构建连接
+		* 关系感知记忆连接
+	* **时间线检索和时间线优化：**
+		* 检索原始记忆时间线。
+		* 上下文感知的时间线细化。
+		* 时间线增强响应生成
+
+## Keep Me Updated! Memory Management in Long-term Conversations
+* **论文：**Keep Me Updated! Memory Management in Long-term Conversations
+* **链接：**https://aclanthology.org/2022.findings-emnlp.276/
+* **问题：**将记忆表示为关键信息的非结构化文本描述，选择性的消除无效或者冗余信息
+* **方法：**
+	* 生成回复，
+	* 对回复进行摘要
+	* 更新记忆库
+	* 检索记忆库，生成回复
