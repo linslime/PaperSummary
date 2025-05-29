@@ -286,7 +286,7 @@
 		1. 首先，从角色的回应中提取未经验证的主张。用GPT-4讲回复分解为独立的句子。
 		2. 用 GPT-4 评价句子的好坏
 		3. 人工核验
-	* **评估结果**：从检索的契合度和引用的准确性分析
+	* **评估结果**：从检索的契合度和引用的准确性
 
 ## 天工 Agent 逆向
 * **官网：**https://www.tiangong.cn/
@@ -324,7 +324,20 @@
 * **关键组成部分：**
 	* **”思考“：**将原本的记忆重新梳理成原子知识
 	* **检索方式：**LSH
-
+* **实验**：
+	* **数据集**：KdConv、Generated Virtual Dataset、Real-world Medical Dataset
+	* **LLM**：ChatGLM、Baichuan2 
+	* **Baseline**：
+		* 没有记忆机制的系统
+		* SiliconFriend
+	* **评估指标**：
+		* 检索准确度评估相关记忆是否被成功回忆（标签：{0：否；1：是}）
+		* 响应正确度评估是否正确回答了探索性问题（标签：{0：错误；0.5：部分正确；1：正确}）
+		* 语境连贯性评估响应是否自然连贯地生成，例如，将对话语境与检索到的记忆联系起来（标签：{0：不连贯；0.5：部分连贯；1：连贯}）
+	* **结果分析**
+		* 分别在三个数据集上进行评测
+		* 评测响应时间
+		* Top k 召回的影响 
 ## THEANINE: Revisiting Memory Management in Long-term Conversations with Timeline-augmented Response Generation
 * **论文：**THEANINE: Revisiting Memory Management in Long-term Conversations with Timeline-augmented Response Generation
 * **链接：**https://arxiv.org/abs/2406.10996v1
@@ -337,6 +350,29 @@
 		* 检索原始记忆时间线。
 		* 上下文感知的时间线细化。
 		* 时间线增强响应生成
+* **实验**
+	* **实验设置**：
+		* **数据集**：MSC and CC
+		* **baseline**：
+			* Memory retrieval
+			* + Memory update
+			* RSum-LLM
+			* MemoChat
+			* COMEDY
+		* **模型和应用细节**
+			* **LLM**：gpt-3.5-turbo0125
+			* **Retrievers**：text-embedding-3-small
+			* **Dialogue sessions**：使用两个数据集中的第 3-5 个会话进行评估
+	* **评估方案1，机器与人工评估**：使用 GEval 从以下 4 个角度评价
+		* RQ1. THEAINE 能否生成包含丰富语境的响应，而不是那些泛泛而谈的响应？即特异性
+		* RQ2. THEAINE 能否比其他方法更好地引用过去的对话？
+			* 对话系统是否在必要时利用过去的信息，即记忆性
+			* 响应不与之前的对话相矛盾，即一致性
+		* RQ3. THEAINE 中的阶段是否合理？
+		* RQ4. 人类是否认同 THEAINE 的程序，以及他们如何看待最终的响应？
+	* **评估方案 2，TeaFarm——一个反事实驱动的长期对话评估流程**
+		* 通过反事实问题测试对话系统的记忆。向系统中输入一个包含错误信息、但记忆中有正确答案的 query，看系统输入有没有被 query 中的错误信息误导，因为只要能从记忆中检索出正确记忆，就不会被误导。
+		* 用数据集 TeaBag 评测
 
 ## Keep Me Updated! Memory Management in Long-term Conversations
 * **论文：**Keep Me Updated! Memory Management in Long-term Conversations
@@ -347,3 +383,12 @@
 	* 对回复进行摘要
 	* 更新记忆库
 	* 检索记忆库，生成回复
+* **实验**：
+	* **数据标注**：给 CareCall<sub>mem</sub> 数据集进行 {“PASS”, “REPLACE”, “APPEND”, “DELETE”} 四类标注，用以下三种 T5 模型完成，如果标注类别不一样，投票完成。
+		* **From scratch**：使用收集到的数据集进行微调
+		* **NLI zero-shot**：使用 KLUENLI 数据集进行微调
+		* **NLI transfer**：使用收集的数据集，对 NLI zero-shot 数据集进行进一步微调
+	* **数据评测方法**：给出数据及其标签，让上面三个模型分别预测数据，计算 F1 分数
+	* **多轮对话评估**：
+		* **自动评估**：对于四种情况计算PPL、BLEU-1/2、F1、Distinct-1/2
+		* **主观评估**：
