@@ -395,16 +395,17 @@
 ## Data Agent
 * **业务背景**：利用大模型生成代码， 操控表格数据。表格数据大多为金融数据。
 * **方法**：
-	1. 结合历史 history，构建 prompt，让 LLM 调度多个 tool
+	1. 结合历史 history，构建 prompt，让 LLM 调度多个 tool，并生成相应的参数；参数一个是 lambda 表达式，另一个是表格数据
 	2. 执行 tool
 	3. 如果 tool 是 “end”，则 tool 调度完成，用 LLM 生成最终回复；否则更新 history，回到步骤一
-* **涉及到的 tools**：写一个 lambda 表达式，可以使用 pandas、numpy、statsmodels、plotly、scipy
+* **涉及到的 tools**：写一个 lambda 表达式，可以使用 pandas、numpy、statsmodels、plotly、scipy；lambda 由 LLM 生成，作为参数传入工具，每个工具的作用其实是一样的，就是执行这个 lambda 表达式
 	* 网络搜索：根据 query 通过 bing 搜索引擎搜索内容
 	* 对 DataFrame 进行过滤或计算 
 	* 统计分析
 	* 时间序列分析
 	* 生成 Plotly 图表
 	* 结束工具调用循环
+* 涉及到模型训练，训练 Qwen2.5-7B 模型，使用 SFT、DPO 算法
 
 ## Async Agent
 * **业务背景**：利用大模型生成代码， 操控表格数据。表格数据大多为金融数据。
